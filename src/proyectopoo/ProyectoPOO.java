@@ -23,6 +23,7 @@ public class ProyectoPOO {
         int n = 0;
         do {
             System.out.println("Contando hacia arriba "+n);
+            System.out.println("Raul es puto");
             n++;
             } while(n<10);
         System.out.println("Hola xd 2");
