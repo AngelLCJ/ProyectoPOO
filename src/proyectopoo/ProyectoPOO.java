@@ -27,6 +27,7 @@ public class ProyectoPOO {
             n++;
             } while(n<10);
         System.out.println("Hola xd 2");
+        system.out.println("Hola carlitos");
     }
     
 }
