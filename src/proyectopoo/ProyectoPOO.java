@@ -20,6 +20,11 @@ public class ProyectoPOO {
         System.out.println("Hola ver2");
         System.out.println("Hola mundo");
         System.out.println("Hola xd");
+        int n = 0;
+        do {
+            System.out.println("Contando hacia arriba "+n);
+            n++;
+            } while(n<10);
     }
     
 }
