@@ -19,6 +19,7 @@ public class ProyectoPOO {
         System.out.println("Hola proyecto");
         System.out.println("Hola ver2");
         System.out.println("Hola mundo");
+        System.out.println("Hola xd");
     }
     
 }
