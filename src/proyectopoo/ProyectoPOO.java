@@ -25,6 +25,7 @@ public class ProyectoPOO {
             System.out.println("Contando hacia arriba "+n);
             n++;
             } while(n<10);
+        System.out.println("Hola xd 2");
     }
     
 }
