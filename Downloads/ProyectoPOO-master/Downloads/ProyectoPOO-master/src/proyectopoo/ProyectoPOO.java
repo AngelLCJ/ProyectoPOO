@@ -19,14 +19,6 @@ public class ProyectoPOO {
         System.out.println("Hola proyecto");
         System.out.println("Hola ver2");
         System.out.println("Hola mundo");
-        System.out.println("Hola xd");
-        int n = 0;
-        do {
-            System.out.println("Contando hacia arriba "+n);
-            System.out.println("Raul es puto");
-            n++;
-            } while(n<10);
-        System.out.println("Hola xd 2");
         System.out.println("Hola mundo 2");
     }
     
