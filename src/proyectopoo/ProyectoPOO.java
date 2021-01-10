@@ -18,6 +18,7 @@ public class ProyectoPOO {
         // TODO code application logic here
         System.out.println("Hola proyecto");
         System.out.println("Hola ver2");
+        System.out.println("Hola mundo");
     }
     
 }
