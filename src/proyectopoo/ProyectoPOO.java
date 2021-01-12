@@ -32,6 +32,7 @@ public class ProyectoPOO {
         
         System.out.println("si se pudo");
         System.out.println("afuefooooooooooooooooooooooooooooooooooooooooooooooooo");
+        System.out.println("Hola quien eres");
     }
     
 }
