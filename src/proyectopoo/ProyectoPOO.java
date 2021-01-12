@@ -29,6 +29,9 @@ public class ProyectoPOO {
         System.out.println("Hola xd 2");
         System.out.println("Hola carlitos ya se pudo");
         System.out.println("Hola mundo 2");
+        
+        System.out.println("si se pudo");
+        System.out.println("afuefooooooooooooooooooooooooooooooooooooooooooooooooo");
     }
     
 }
