@@ -5,26 +5,32 @@
  */
 package productos;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author perry
  */
 public class Musica extends Disco{
-    String[] nombreCanciones = new String[10];
+    //String nombreCanciones ;
+    ArrayList<String>nombreCanciones;
+    
 
     public Musica() {
     }
 
-    public Musica(String[] nombreCanciones, String artista, int numCanciones, int precio, int codigoBarra, String nombre, String marca) {
+    public Musica(ArrayList nombreCanciones, String artista, int numCanciones, int precio, int codigoBarra, String nombre, String marca) {
         super(artista, numCanciones, precio, codigoBarra, nombre, marca);
         this.nombreCanciones = nombreCanciones;
+        //nombreCanciones.add("Hola");
+        //nombreCanciones.add("Adios");
     }
 
-    public String[] getNombreCanciones() {
+    public ArrayList getNombreCanciones() {
         return nombreCanciones;
     }
 
-    public void setNombreCanciones(String[] nombreCanciones) {
+    public void setNombreCanciones(ArrayList nombreCanciones) {
         this.nombreCanciones = nombreCanciones;
     }
 

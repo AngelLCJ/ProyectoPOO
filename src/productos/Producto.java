@@ -10,7 +10,7 @@ package productos;
  * @author perry
  */
 public class Producto {
-    int precio,codigoBarra;
+    public int precio,codigoBarra;
     String nombre , marca;
 
     public Producto() {
