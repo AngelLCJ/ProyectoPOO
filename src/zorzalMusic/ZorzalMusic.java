@@ -9,6 +9,11 @@ package zorzalMusic;
  *
  * @author angel
  */
+import empleados.*;
+import aparatosDeAmbiente.*;
+import crud.*;
+import login.*;
+import productos.*;
 public class ZorzalMusic {
 
     /**
