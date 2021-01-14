@@ -13,12 +13,16 @@ import java.util.Hashtable;
  * @author carlos
  */
 public class Inventario {
-    public static void inventario() {
+    public static void main(String[] args) {
         
     
-     Hashtable<Integer,String>inventarioMusica=new Hashtable<Integer,String>();
-        inventarioMusica.put(1234567890," ");
-        inventarioMusica.put(1234567891," ");
+    
+        String[] canciones1 = {"hola","adios"};
+        Musica disco1 = new Musica(canciones1, "Michael Jackson", 9, 1500, 123456789, "Thriller", "MJJ Productions Inc");
+        
+        Hashtable<Integer,Musica>inventarioMusica=new Hashtable<Integer,Musica>();
+        inventarioMusica.put(disco1.codigoBarra,disco1);
+        /*inventarioMusica.put(1234567891," ");
         inventarioMusica.put(1234567892," ");
         inventarioMusica.put(1234567893," ");
         inventarioMusica.put(123567894," ");
@@ -27,23 +31,23 @@ public class Inventario {
         inventarioMusica.put(123567897," ");
         inventarioMusica.put(123567898," ");
         inventarioMusica.put(123567899," ");
-        inventarioMusica.put(123567900," "); 
+        inventarioMusica.put(123567900," ");*/ 
         
         
-        for(String clave: miTabla.keySet()){
-            System.out.println(clave);
+        for(int c: inventarioMusica.keySet()){
+            System.out.println(c);
         }
-        for(Integer valor: miTabla.values()){
+        for(Musica valor: inventarioMusica.values()){
             System.out.println(valor);
         }
         /* Enumeraciones */ //Como no se puede obtener ambos campos a la vez con for-each
         int c;
-        Integer valor;
-        Enumeration<String>enumeracionHash=miTabla.keys();
+        Musica valor;
+        /*Enumeration<String>enumeracionHash=miTabla.keys();
         while(enumeracionHash.hasMoreElements()){
             clave=enumeracionHash.nextElement();
             valor=miTabla.get(clave);
             System.out.println("Clave "+clave+ " Valor "+ valor);
-         }
+         }*/
     }
 }
