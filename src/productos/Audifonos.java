@@ -9,6 +9,16 @@ package productos;
  *
  * @author perry
  */
-public class Audifonos {
+public class Audifonos extends Productos {
+    String color, tipo;
+
+    public Audifonos() {
+    }
     
+    public Audifonos(String color, String tipo, String nombre, String marca, int codigoBarra, int precio) {
+        super(nombre, marca, codigoBarra, precio);
+        this.color = color;
+        this.tipo = tipo;
+    }
+ 
 }

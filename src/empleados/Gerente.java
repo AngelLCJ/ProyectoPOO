@@ -9,6 +9,6 @@ package empleados;
  *
  * @author perry
  */
-public class Gerente {
+public class Gerente extends Empleado {
     
 }

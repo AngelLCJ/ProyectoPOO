@@ -9,6 +9,18 @@ package productos;
  *
  * @author perry
  */
-public class Musica {
+public class Musica extends Disco{
+    String nombreCanciones;
+
+    public Musica() {
+    }
+
+    public Musica(String nombreCanciones, String artista, int numCanciones, String nombre, String marca, int codigoBarra, int precio) {
+        super(artista, numCanciones, nombre, marca, codigoBarra, precio);
+        this.nombreCanciones = nombreCanciones;
+    }
+
+    
+
     
 }

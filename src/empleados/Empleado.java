@@ -10,5 +10,14 @@ package empleados;
  * @author carlos
  */
 public class Empleado {
-    
+    String nombre;
+    String puesto;
+
+    public Empleado() {
+    }
+
+    public Empleado(String nombre, String puesto) {
+        this.nombre = nombre;
+        this.puesto = puesto;
+    }
 }
