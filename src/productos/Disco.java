@@ -9,7 +9,7 @@ package productos;
  *
  * @author carlos
  */
-public class Disco extends Productos{
+public class Disco extends Producto{
     String artista;
     int numCanciones;
 

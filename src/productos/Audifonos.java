@@ -9,7 +9,7 @@ package productos;
  *
  * @author perry
  */
-public class Audifonos extends Productos {
+public class Audifonos extends Producto {
     String color, tipo;
 
     public Audifonos() {
