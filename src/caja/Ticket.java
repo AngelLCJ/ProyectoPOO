@@ -9,6 +9,6 @@ package caja;
  *
  * @author perry
  */
-public class Tiket {
+public class Ticket {
     
 }
