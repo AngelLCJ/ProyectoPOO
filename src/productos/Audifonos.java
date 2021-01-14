@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package empleados;
+package productos;
 
 /**
  *
- * @author angel
+ * @author perry
  */
-public class empleados {
-   
+public class Audifonos {
+    
 }

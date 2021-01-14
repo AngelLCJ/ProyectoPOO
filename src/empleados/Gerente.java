@@ -7,8 +7,8 @@ package empleados;
 
 /**
  *
- * @author angel
+ * @author perry
  */
-public class empleados {
-   
+public class Gerente {
+    
 }
