@@ -16,11 +16,10 @@ public class Disco extends Productos{
     public Disco() {
     }
 
-    public Disco(String artista, int numCanciones, String nombre, String marca, int codigoBarra, int precio) {
-        super(nombre, marca, codigoBarra, precio);
+    public Disco(String artista, int numCanciones, int precio, int codigoBarra, String nombre, String marca) {
+        super(precio, codigoBarra, nombre, marca);
         this.artista = artista;
         this.numCanciones = numCanciones;
     }
-    
-    
+
 }

@@ -14,11 +14,10 @@ public class Audifonos extends Productos {
 
     public Audifonos() {
     }
-    
-    public Audifonos(String color, String tipo, String nombre, String marca, int codigoBarra, int precio) {
-        super(nombre, marca, codigoBarra, precio);
+
+    public Audifonos(String color, String tipo, int precio, int codigoBarra, String nombre, String marca) {
+        super(precio, codigoBarra, nombre, marca);
         this.color = color;
         this.tipo = tipo;
     }
- 
 }
