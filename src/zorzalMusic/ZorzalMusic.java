@@ -14,6 +14,7 @@ import aparatosDeAmbiente.*;
 import crud.*;
 import login.*;
 import productos.*;
+import crud.*;
 public class ZorzalMusic {
 
     /**
@@ -40,6 +41,23 @@ public class ZorzalMusic {
         System.out.println("Hola quien eres");
         System.out.println("Yo soy groot");
         System.out.println("Pasamos todas las materias?");
+        int opcion1 ;
+        do{
+        KeyboardInput input  =new KeyboardInput();
+        System.out.println("******* Crud *********\n");
+        System.out.println("1)Crear\t 2)Leer\t 3)Actualizar\t 4)Borrar\t\n");
+        System.out.println("Que opción desea realizar\n");
+        //Object menu=new Object();
+        opcion1 = input.readInteger();
+        switch(opcion1){
+                case 1: 
+                    Crear crearCrud=new Crear();
+                    System.out.println("Que producto desea crear:\t\n");
+                    System.out.println("1)Disco de musica\t 2)Disco de video\t 3)Audifonos\t\n");
+                    crearCrud.CrearMusica();
+                    
+        }
+        }while(opcion1>4);
     }
     
 }

@@ -4,39 +4,50 @@
  * and open the template in the editor.
  */
 package crud;
-
+import java.util.ArrayList;
+import productos.*;
+import inventario.*;
 /**
  *
  * @author angel
  */
 public class Crear {
     
-    String nom, codi;
-
-    public Crear(String nom, String codi) {
-        
-    }
-
-    public String getNom() {
-        return nom;
-    }
-
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
-
-    public String getCodi() {
-        return codi;
-    }
-
-    public void setCodi(String codi) {
-        this.codi = codi;
-    }
-
-    @Override
-    public String toString() {
-        return "Crear{" + "nom=" + nom + ", codi=" + codi + '}';
-    }
-    
+   public Crear(){ 
+       
+   }
+   public void CrearMusica(){
+       Musica cancionNueva=new Musica();
+       System.out.println("Ingrese el nombre del artista ");
+       KeyboardInput input=new KeyboardInput();
+       String artista = input.readString();
+       cancionNueva.setArtista(artista);
+       System.out.println("Ingrese el nombre del album");
+       String nombAlbum=input.readString();
+       cancionNueva.setNombre(nombAlbum);
+       System.out.println("Ingrese el numero de canciones ");
+       int numCanciones=input.readInteger();
+       cancionNueva.setNumCanciones(numCanciones);
+       ArrayList<String>nuevaCancion = new ArrayList<String>();
+       for(int i=0;i<numCanciones; i++){
+           System.out.println("Ingrese el nombre de la cancion "+ i);
+           String nombCancion= input.readString();
+           nuevaCancion.add(nombCancion);
+       }
+       cancionNueva.setNombreCanciones(nuevaCancion);
+       System.out.println("Ingrese el precio");
+       int precio = input.readInteger();
+       cancionNueva.setPrecio(precio);
+       System.out.println("Ingrese el código de barra");
+       int codigoB= input.readInteger();
+       cancionNueva.setCodigoBarra(codigoB);
+       System.out.println("Ingrese la marca");
+       String marcaM=input.readString();
+       cancionNueva.setMarca(marcaM);
+       
+       InventarioMusica inventarioMus=new InventarioMusica();
+       inventarioMus.p
+               .put(cancionNueva.codigoBarra,cancionNueva);
+   }
        
 }
