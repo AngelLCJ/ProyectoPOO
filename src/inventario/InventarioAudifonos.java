@@ -10,5 +10,7 @@ package inventario;
  * @author carlos
  */
 public class InventarioAudifonos {
+    public InventarioAudifonos(){
     
+}
 }
