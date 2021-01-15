@@ -6,6 +6,7 @@
 package inventario;
 
 import java.util.ArrayList;
+import java.util.Hashtable;
 import productos.Video;
 
 /**
@@ -13,34 +14,30 @@ import productos.Video;
  * @author carlos
  */
 public class InventarioVideo {
-    public InventarioVideo(){
+    public static void main(String[] args) {
+    
         Video cd1 = new Video(60," BrunoMars ",1 , 227, 20001, "Funk Engineering", "DVD");
         Video cd2 = new Video(60," Phil Collins ",1 , 399, 20002, "Live at Montreux 2004", "Blu-ray disc");
         Video cd3 = new Video(160," Varios ",23 , 467, 20003, "Hamilton", "Warner Music México");
         Video cd4 = new Video(60," BrunoMars ",2 , 951, 20004, "Help", "Capitol");
         Video cd5 = new Video(21," BrunoMars ",1 , 462, 20005, "Queen Rock Montreal & Live Aid", "Eagle Rock Ent");
-     /*ArrayList<String>nombreVideos=new ArrayList<String>();
-        nombreVideos.add("YELLOW SUBMARINE");
-        nombreVideos.add("NUMBER ONES");
-        nombreVideos.add("THE KING OF ROCK");
-        nombreVideos.add("");
-        nombreVideos.add("Hola");
-        nombreVideos.add("Hola");
-        String video7=new String ("Hola");
         
-      ArrayList<String>artistaVideos=new ArrayList<String>();
-      artistaVideos.add(" The Beatles");
-      artistaVideos.add("MICHAEL JACKSON");
-      artistaVideos.add("ELVIS PRESLEY");
-      artistaVideos.add("");
-      artistaVideos.add("");
-      
-      ArrayList<Integer>duracionVideo=new ArrayList<Integer>();
-      Integer duracionV1= new Integer(91);
-      Integer duracionV2= new Integer(90);
-      Integer duracionV3= new Integer(120);*/
+        Hashtable<Integer,Video>inventarioVideo=new Hashtable<Integer,Video>();
+        inventarioVideo.put(cd1.codigoBarra,cd1);
+        inventarioVideo.put(cd2.codigoBarra,cd2);
+        inventarioVideo.put(cd3.codigoBarra,cd3);
+        inventarioVideo.put(cd4.codigoBarra,cd4);
+        inventarioVideo.put(cd5.codigoBarra,cd5);
+     for(int claveVideo: inventarioVideo.keySet()){
+            System.out.println(claveVideo);
+        }
+        
+        for(Video valorAudifonos: inventarioVideo.values()){
+            System.out.println(valorAudifonos);
+        }
+    }
       
       
         
     }
-}
+

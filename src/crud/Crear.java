@@ -46,7 +46,7 @@ public class Crear {
        cancionNueva.setMarca(marcaM);
        
        InventarioMusica inventarioMus=new InventarioMusica();
-       inventarioMus.p
+       inventarioMus.put
                .put(cancionNueva.codigoBarra,cancionNueva);
    }
        

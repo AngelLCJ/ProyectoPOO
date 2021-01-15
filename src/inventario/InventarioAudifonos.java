@@ -13,7 +13,7 @@ import productos.Audifonos;
  * @author carlos
  */
 public class InventarioAudifonos {
-    public static void main(String[] args){//public void inventarioAudifonos(){
+    public static void main(String[] args){/*Quitar el main es solo de prueba*///public void inventarioAudifonos(){
         Audifonos audifonos1 = new Audifonos("Negro","In Ear",3200,30001,"SE215","Shure");
         Audifonos audifonos2 = new Audifonos("Blanco","Wireless",2200,30002,"Smokin Buds","Skullcandy");
         Audifonos audifonos3 = new Audifonos("Negro/Azul","Over Ear",1600,30003,"porta Pro","Koss");
