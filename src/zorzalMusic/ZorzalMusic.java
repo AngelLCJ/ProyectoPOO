@@ -116,9 +116,38 @@ public class ZorzalMusic {
                        }
                     }while(opcion2<5);
                 case 3:
-                    do {                        
+                   // do {                        
                         
-                    } while (opcion2<5);
+                    //} while (opcion2<5);
+                case 4:
+                    do{
+                        Borrar borrarCrud=new Borrar();
+                        System.out.println("¿Que producto deseas borrar\n");
+                        System.out.println("1) Disco de musica\t2) Disco de video\t3) Audifonos");
+                        KeyboardInput input2=new KeyboardInput();
+                        opcion2=input.readInteger();
+                        switch(opcion2){
+                            case 1:
+                                borrarCrud.borrarElemento(inventarioMusica);
+                                for(Musica valor: inventarioMusica.values()){
+                                    System.out.println(valor);
+                                }
+                                break;
+                            case 2:
+                                borrarCrud.borrarElemento(inventarioVideo);
+                                for(Video valor: inventarioVideo.values()){
+                                    System.out.println(valor);
+                                }
+                                break;
+                            case 3:
+                                borrarCrud.borrarElemento(inventarioAudifonos);
+                                for(Audifonos valor: inventarioAudifonos.values()){
+                                    System.out.println(valor);
+                                }
+                                break;
+                            } 
+                    }while(opcion2<4);
+                    break;
             }
         }while(opcion1<5);
     }
