@@ -27,7 +27,9 @@ public class ZorzalMusic {
         int opcion2;
         Hashtable<Integer,Musica>inventarioMusica=new Hashtable<Integer,Musica>();
         Inventario inventario = new Inventario();
+        Hashtable<Integer,Video>inventarioVideo=new Hashtable<Integer,Video>();
         inventario.inventarioMusicaMetodo(inventarioMusica);
+        inventario.inventarioVideoMetodo(inventarioVideo);
         
         do{
         KeyboardInput input  =new KeyboardInput();
@@ -50,9 +52,12 @@ public class ZorzalMusic {
                                 for(Musica valor: inventarioMusica.values()){
                                     System.out.println(valor);
                                 }
-                            /*case 2:
-                                crearCrud.crearVideo();
-                            case 3:
+                            case 2:
+                                crearCrud.crearVideo(inventarioVideo);
+                                for(Video valorVideo: inventarioVideo.values()){
+                                    System.out.println(valorVideo);
+                                }
+                            /*case 3:
                                 crearCrud.crearAudifonos();*/
                         }
                     }

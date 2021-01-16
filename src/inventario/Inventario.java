@@ -8,6 +8,7 @@ package inventario;
 import java.util.ArrayList;
 import java.util.Hashtable;
 import productos.Musica;
+import productos.Video;
 import zorzalMusic.*;
 
 /**
@@ -106,6 +107,22 @@ public class Inventario {
             valor=miTabla.get(clave);
             System.out.println("Clave "+clave+ " Valor "+ valor);
          }*/
+        
+        return inventarioTabla;
+    }
+    
+    public Hashtable inventarioVideoMetodo(Hashtable inventarioTabla){
+        Video cd1 = new Video(60," BrunoMars ",1 , 227, 20001, "Funk Engineering", "DVD");
+        Video cd2 = new Video(60," Phil Collins ",1 , 399, 20002, "Live at Montreux 2004", "Blu-ray disc");
+        Video cd3 = new Video(160," Varios ",23 , 467, 20003, "Hamilton", "Warner Music México");
+        Video cd4 = new Video(60," BrunoMars ",2 , 951, 20004, "Help", "Capitol");
+        Video cd5 = new Video(21," BrunoMars ",1 , 462, 20005, "Queen Rock Montreal & Live Aid", "Eagle Rock Ent");
+        
+        inventarioTabla.put(cd1.codigoBarra,cd1);
+        inventarioTabla.put(cd2.codigoBarra,cd2);
+        inventarioTabla.put(cd3.codigoBarra,cd3);
+        inventarioTabla.put(cd4.codigoBarra,cd4);
+        inventarioTabla.put(cd5.codigoBarra,cd5);
         
         return inventarioTabla;
     }

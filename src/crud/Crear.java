@@ -38,7 +38,7 @@ public class Crear {
            System.out.println("Ingrese la disquera");
            marca = input.readString();
            System.out.println("Ingrese el precio");
-           precio = input.readInteger();
+           precio = input.readFloat();
            System.out.println("Ingrese el codigo de barras");
            codigoBarra = input.readInteger();
            System.out.println("Ingrese el numero de canciones");
@@ -55,9 +55,6 @@ public class Crear {
            inventarioM.put(discoEquis.codigoBarra,discoEquis);*/
            inventarioTabla.put(discoX.codigoBarra,discoX);
            
-            int clave;
-            Musica valor;
-            Enumeration<Integer> enumeracionHash = inventarioTabla.keys();
             
        }
        /*Musica cancionNueva=new Musica();
@@ -93,5 +90,38 @@ public class Crear {
                .put(cancionNueva.codigoBarra,cancionNueva);*/
    return inventarioTabla;
    }
+   
+   public Hashtable crearVideo(Hashtable inventarioTabla){
+       int numDiscos, duracion, numCanciones, codigoBarra;
+       float precio;
+       String artista, nombre, marca;
        
+       System.out.println("¿Cuantos discos de video desea crear?");
+       KeyboardInput input=new KeyboardInput();
+       numDiscos = input.readInteger();
+       
+       for (int i = 0; i < numDiscos; i++) {
+           System.out.println("Ingrese el nombre del artista");
+           artista = input.readString();
+           System.out.println("Ingrese el nombre del DVD");
+           nombre = input.readString();
+           System.out.println("Ingrese el nombre de la disquera");
+           marca = input.readString();
+           System.out.println("Ingrese el precio");
+           precio = input.readFloat();
+           System.out.println("Ingrese el numero de cacniones");
+           numCanciones = input.readInteger();
+           System.out.println("Ingrese el codigo de barra");
+           codigoBarra = input.readInteger();
+           System.out.println("Ingrese la duracion del disco de video");
+           duracion = input.readInteger();
+           
+           Video videoX = new Video(duracion, artista, numCanciones, precio, codigoBarra, nombre, marca);
+           inventarioTabla.put(videoX.codigoBarra,videoX);
+       }
+       
+       return inventarioTabla;
+   }
+   
+   
 }
