@@ -7,7 +7,9 @@ package crud;
 import java.util.ArrayList;
 import productos.*;
 import inventario.*;
+import java.util.Enumeration;
 import java.util.Hashtable;
+import zorzalMusic.*;
 /**
  *
  * @author angel
@@ -17,13 +19,14 @@ public class Crear {
    public Crear(){ 
        
    }
-   public Inventario crearMusica(Inventario inventario){
+   public Hashtable crearMusica(Hashtable inventarioTabla){
        int numDiscos;
        ArrayList nombreCanciones;
        String artista, nombre, marca; 
        int numCanciones, codigoBarra;
        float precio;
        ///alkjslkjalsk
+       
        System.out.println("¿Cuantos discos de musica desea crear?");
        KeyboardInput input=new KeyboardInput();
        numDiscos = input.readInteger();
@@ -50,11 +53,12 @@ public class Crear {
            //InventarioMusica inventarioM = new InventarioMusica();
            /*inventarioM.inventarioMusica();
            inventarioM.put(discoEquis.codigoBarra,discoEquis);*/
-           //inventarioMusica.put(discoX.codigoBarra,discoX);
-           /*for(Musica valor: inventarioMusica.values()){
-           System.out.println(valor);
-           }*/
+           inventarioTabla.put(discoX.codigoBarra,discoX);
            
+            int clave;
+            Musica valor;
+            Enumeration<Integer> enumeracionHash = inventarioTabla.keys();
+            
        }
        /*Musica cancionNueva=new Musica();
        System.out.println("Ingrese el nombre del artista ");
@@ -87,7 +91,7 @@ public class Crear {
        InventarioMusica inventarioMus=new InventarioMusica();
        inventarioMus.p
                .put(cancionNueva.codigoBarra,cancionNueva);*/
-   return inventario;
+   return inventarioTabla;
    }
        
 }

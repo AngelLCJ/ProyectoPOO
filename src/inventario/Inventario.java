@@ -8,6 +8,7 @@ package inventario;
 import java.util.ArrayList;
 import java.util.Hashtable;
 import productos.Musica;
+import zorzalMusic.*;
 
 /**
  *
@@ -18,8 +19,7 @@ public class Inventario {
     public Inventario() {
     }
     
-    public void inventarioMusicaMetodo(){//public static void main(String[] args) {
-
+    public Hashtable inventarioMusicaMetodo(Hashtable inventarioTabla){//public static void main(String[] args) {
         ArrayList<String>nombreCanciones1=new ArrayList<String>();
         nombreCanciones1.add("Wanna Be Startin' Somethin'");
         nombreCanciones1.add("Baby be mine");
@@ -84,19 +84,19 @@ public class Inventario {
         nombreCanciones5.add("Back To Basics");
         Musica disco5 = new Musica(nombreCanciones5, "Jenny And The Mexicats", 14, 489, 10005, "ome", "Mexicats Records");
         
-        Hashtable<Integer,Musica>inventarioMusica=new Hashtable<Integer,Musica>();
-        inventarioMusica.put(disco1.codigoBarra,disco1);
-        inventarioMusica.put(disco2.codigoBarra,disco2);
-        inventarioMusica.put(disco3.codigoBarra,disco3);
-        inventarioMusica.put(disco4.codigoBarra,disco4);
-        inventarioMusica.put(disco5.codigoBarra,disco5);
         
-        for(int c: inventarioMusica.keySet()){
+        inventarioTabla.put(disco1.codigoBarra,disco1);
+        inventarioTabla.put(disco2.codigoBarra,disco2);
+        inventarioTabla.put(disco3.codigoBarra,disco3);
+        inventarioTabla.put(disco4.codigoBarra,disco4);
+        inventarioTabla.put(disco5.codigoBarra,disco5);
+        
+        /*for(int c: inventarioTabla.keySet()){
             System.out.println(c);
         }
-        for(Musica valor: inventarioMusica.values()){
+        for(Musica valor: inventarioTabla.values()){
             System.out.println(valor);
-        }
+        }*/
         /* Enumeraciones */ //Como no se puede obtener ambos campos a la vez con for-each
         int c;
         Musica valor;
@@ -106,5 +106,7 @@ public class Inventario {
             valor=miTabla.get(clave);
             System.out.println("Clave "+clave+ " Valor "+ valor);
          }*/
+        
+        return inventarioTabla;
     }
 }

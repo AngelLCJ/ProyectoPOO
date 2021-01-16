@@ -16,6 +16,7 @@ import inicio.*;
 import productos.*;
 import crud.*;
 import inventario.*;
+import java.util.Hashtable;
 public class ZorzalMusic {
 
     /**
@@ -24,8 +25,10 @@ public class ZorzalMusic {
     public static void main(String[] args) {
         int opcion1 ;
         int opcion2;
+        Hashtable<Integer,Musica>inventarioMusica=new Hashtable<Integer,Musica>();
         Inventario inventario = new Inventario();
-        inventario.inventarioMusicaMetodo();
+        inventario.inventarioMusicaMetodo(inventarioMusica);
+        
         do{
         KeyboardInput input  =new KeyboardInput();
         System.out.println("******* Crud *********\n");
@@ -43,7 +46,10 @@ public class ZorzalMusic {
                         opcion2=input.readInteger();
                         switch(opcion2){
                             case 1:
-                                crearCrud.crearMusica(inventario);
+                                crearCrud.crearMusica(inventarioMusica);
+                                for(Musica valor: inventarioMusica.values()){
+                                    System.out.println(valor);
+                                }
                             /*case 2:
                                 crearCrud.crearVideo();
                             case 3:
