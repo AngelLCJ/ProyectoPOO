@@ -34,16 +34,17 @@ public class Ticket {
             br = new BufferedReader(new InputStreamReader(System.in));
             //texto = br.readLine();
             //System.out.println(texto);
-            Serializador Fecha = new Serializador();
+            Serializador fecha = new Serializador();
             FileWriter fw = new FileWriter("TicketZM.txt");
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter salida =new PrintWriter(fw);
-            //salida.println(texto);
+            salida.println(fecha);
             salida.println("\t\t\t\t\t *****Zorzal Music***** \t\t\t\t\t");
             salida.println("\n Nº 1007, Perif. Blvd. Manuel Ávila Camacho, Hab Jardines de Santa Monica, 54055 Tlalnepantla de Baz, Méx.");
             salida.println("Quejas y sugerencias al numero: 800 000 0097");
             salida.println("========================================================================================================================");
             salida.println("lo atendio: ");
+            salida.println("");
             salida.println("\t\tProductos\t\t\n");
             salida.println(" ");
             salida.println("Total: $");
@@ -60,8 +61,9 @@ public class Ticket {
         
         try{
             
-             FileReader fr = new FileReader("TicketZM.txt");
-             br = new BufferedReader(fr);
+             FileReader fw = new FileReader("TicketZM.txt");
+             br = new BufferedReader(fw);
+             System.out.println("Generando ticket");
              System.out.println("el contenido del Ticket es: ");
              String linea = br.readLine();
              while(linea != null){
@@ -70,5 +72,6 @@ public class Ticket {
              }
              br.close();
         }catch(IOException ioe){}
+        
     }
 }
