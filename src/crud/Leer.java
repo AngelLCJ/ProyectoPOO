@@ -5,10 +5,24 @@
  */
 package crud;
 
+import java.util.Hashtable;
+import productos.Musica;
+
 /**
  *
  * @author carlos
  */
 public class Leer {
+
+    public Leer() {
+    }
     
+    public Hashtable LeerMusica(Hashtable inventarioTabla){
+        for(Musica valor: inventarioTabla.values()){
+            System.out.println(valor);
+        }
+    
+    
+    
+    }
 }

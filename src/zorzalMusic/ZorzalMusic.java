@@ -63,6 +63,21 @@ public class ZorzalMusic {
                     }
                     while(opcion2<4);
                     //crearCrud.CrearMusica();
+                case 2:
+                    Leer leerCrud = new Leer();
+                    System.out.println("¿Que catalogo deseas observar?");
+                    System.out.println("1)Catálogo General\t2)Catálogo Disco de m úsica\t3)Catálogo de disco de video\t4)Catálogo de audifonos");
+                    KeyboardInput input2=new KeyboardInput();
+                    opcion2=input.readInteger();
+                        switch(opcion2){
+                            case 1:
+                                
+                            case 2:
+                                for(Musica valor: inventarioMusica.values()){
+                                    System.out.println(valor);
+                                }
+                                //leerCrud.LeerMusica(inventarioMusica);
+                        }
                     
         }
         }while(opcion1<5);
