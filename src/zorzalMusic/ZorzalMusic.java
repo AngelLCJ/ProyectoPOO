@@ -67,12 +67,54 @@ public class ZorzalMusic {
                                     System.out.println(valorAudifonos);
                                 }
                                 break;
-                        }
-                    }
-                    while(opcion2<4);
+                            } 
+                                
+                        }  while(opcion2<4);
                     //crearCrud.CrearMusica();
-                    
-        }
+                case 2:
+                    Leer leerCrud = new Leer();
+                    System.out.println("¿Que catalogo deseas observar?");
+                    System.out.println("1)Catálogo General\t2)Catálogo Disco de música\t3)Catálogo de disco de video\t4)Catálogo de audifonos");
+                    KeyboardInput input2=new KeyboardInput();
+                    opcion2=input.readInteger();
+                    switch(opcion2){
+                        case 1:
+                                System.out.println("Discos de Música");
+                                 for(Musica valor: inventarioMusica.values()){
+                                    System.out.println(valor);
+                                }
+                                //leerCrud.LeerMusica(inventarioMusica);
+                                System.out.println("Discos de Video");
+                                for(Video valor: inventarioVideo.values()){
+                                    System.out.println(valor);
+                                }
+                                System.out.println("Audifonos");
+                                for(Audifonos valor: inventarioAudifonos.values()){
+                                    System.out.println(valor);
+                                }
+                                break;
+                            case 2:
+                                System.out.println("Discos de Música");
+                                for(Musica valor: inventarioMusica.values()){
+                                    System.out.println(valor);
+                                }
+                                //leerCrud.LeerMusica(inventarioMusica);
+                                break;
+                            case 3:
+                                System.out.println("Discos de Videos");
+                                for(Video valor: inventarioVideo.values()){
+                                    System.out.println(valor);
+                                }
+                                break;
+                            case 4:
+                                System.out.println("Audifonos");
+                                for(Audifonos valor: inventarioAudifonos.values()){
+                                    System.out.println(valor);
+                                }
+                                break;
+                    }
+        
+            }
         }while(opcion1<5);
     }
     
