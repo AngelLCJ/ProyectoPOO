@@ -19,7 +19,7 @@ public class Musica extends Disco{
     public Musica() {
     }
 
-    public Musica(ArrayList nombreCanciones, String artista, int numCanciones, int precio, int codigoBarra, String nombre, String marca) {
+    public Musica(ArrayList nombreCanciones, String artista, int numCanciones, float precio, int codigoBarra, String nombre, String marca) {
         super(artista, numCanciones, precio, codigoBarra, nombre, marca);
         this.nombreCanciones = nombreCanciones;
         //nombreCanciones.add("Hola");
@@ -50,11 +50,11 @@ public class Musica extends Disco{
         this.numCanciones = numCanciones;
     }
 
-    public int getPrecio() {
+    public float getPrecio() {
         return precio;
     }
 
-    public void setPrecio(int precio) {
+    public void setPrecio(float precio) {
         this.precio = precio;
     }
 

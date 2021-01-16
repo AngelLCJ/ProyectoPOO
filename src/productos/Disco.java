@@ -16,7 +16,7 @@ public class Disco extends Producto{
     public Disco() {
     }
 
-    public Disco(String artista, int numCanciones, int precio, int codigoBarra, String nombre, String marca) {
+    public Disco(String artista, int numCanciones, float precio, int codigoBarra, String nombre, String marca) {
         super(precio, codigoBarra, nombre, marca);
         this.artista = artista;
         this.numCanciones = numCanciones;
@@ -38,11 +38,11 @@ public class Disco extends Producto{
         this.numCanciones = numCanciones;
     }
 
-    public int getPrecio() {
+    public float getPrecio() {
         return precio;
     }
 
-    public void setPrecio(int precio) {
+    public void setPrecio(float precio) {
         this.precio = precio;
     }
 

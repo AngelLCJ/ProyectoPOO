@@ -15,7 +15,7 @@ public class Video extends Disco{
     public Video() {
     }
 
-    public Video(int duracion, String artista, int numCanciones, int precio, int codigoBarra, String nombre, String marca) {
+    public Video(int duracion, String artista, int numCanciones, float precio, int codigoBarra, String nombre, String marca) {
         super(artista, numCanciones, precio, codigoBarra, nombre, marca);
         this.duracion = duracion;
     }
@@ -44,11 +44,11 @@ public class Video extends Disco{
         this.numCanciones = numCanciones;
     }
 
-    public int getPrecio() {
+    public float getPrecio() {
         return precio;
     }
 
-    public void setPrecio(int precio) {
+    public void setPrecio(float precio) {
         this.precio = precio;
     }
 

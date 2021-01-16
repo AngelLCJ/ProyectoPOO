@@ -10,24 +10,25 @@ package productos;
  * @author perry
  */
 public class Producto {
-    public int precio,codigoBarra;
+    public int codigoBarra;
+    public float precio;
     String nombre , marca;
 
     public Producto() {
     }
 
-    public Producto(int precio, int codigoBarra, String nombre, String marca) {
+    public Producto(float precio, int codigoBarra, String nombre, String marca) {
         this.precio = precio;
         this.codigoBarra = codigoBarra;
         this.nombre = nombre;
         this.marca = marca;
     }
 
-    public int getPrecio() {
+    public float getPrecio() {
         return precio;
     }
 
-    public void setPrecio(int precio) {
+    public void setPrecio(float precio) {
         this.precio = precio;
     }
 

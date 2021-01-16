@@ -15,7 +15,7 @@ public class Audifonos extends Producto {
     public Audifonos() {
     }
 
-    public Audifonos(String color, String tipo, int precio, int codigoBarra, String nombre, String marca) {
+    public Audifonos(String color, String tipo, float precio, int codigoBarra, String nombre, String marca) {
         super(precio, codigoBarra, nombre, marca);
         this.color = color;
         this.tipo = tipo;
@@ -37,11 +37,11 @@ public class Audifonos extends Producto {
         this.tipo = tipo;
     }
 
-    public int getPrecio() {
+    public float getPrecio() {
         return precio;
     }
 
-    public void setPrecio(int precio) {
+    public void setPrecio(float precio) {
         this.precio = precio;
     }
 
