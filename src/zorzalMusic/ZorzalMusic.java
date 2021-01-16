@@ -114,8 +114,11 @@ public class ZorzalMusic {
                                 }
                                 break;
                        }
-                    }while(opcion2>5);
-        
+                    }while(opcion2<5);
+                case 3:
+                    do {                        
+                        
+                    } while (opcion2<5);
             }
         }while(opcion1<5);
     }
