@@ -31,10 +31,10 @@ public class Crear {
        KeyboardInput input=new KeyboardInput();
        numDiscos = input.readInteger();
        for (int i = 0; i < numDiscos; i++) {
+           System.out.println("Ingrese el nombre del album "+(i+1));
+           nombre = input.readString();
            System.out.println("Ingrese el nomnbre del artista");
            artista = input.readString();
-           System.out.println("Ingrese el nombre del album");
-           nombre = input.readString();
            System.out.println("Ingrese la disquera");
            marca = input.readString();
            System.out.println("Ingrese el precio");
@@ -101,15 +101,15 @@ public class Crear {
        numDiscos = input.readInteger();
        
        for (int i = 0; i < numDiscos; i++) {
+           System.out.println("Ingrese el nombre del DVD "+(i+1));
+           nombre = input.readString();
            System.out.println("Ingrese el nombre del artista");
            artista = input.readString();
-           System.out.println("Ingrese el nombre del DVD");
-           nombre = input.readString();
            System.out.println("Ingrese el nombre de la disquera");
            marca = input.readString();
            System.out.println("Ingrese el precio");
            precio = input.readFloat();
-           System.out.println("Ingrese el numero de cacniones");
+           System.out.println("Ingrese el numero de canciones");
            numCanciones = input.readInteger();
            System.out.println("Ingrese el codigo de barra");
            codigoBarra = input.readInteger();
@@ -123,5 +123,32 @@ public class Crear {
        return inventarioTabla;
    }
    
+   public Hashtable crearAudifonos(Hashtable inventarioTabla){
+       String color, tipo, nombre, marca;
+       int codigoBarra, numAudifonos;
+       float precio;
+       
+       System.out.println("¿Cuantos audifonos desea crear?");
+       KeyboardInput input=new KeyboardInput();
+       numAudifonos = input.readInteger();
+       
+       for (int i = 0; i < numAudifonos; i++) {
+           System.out.println("Ingrese el nombre de los audifonos numero "+(i+1));
+           nombre = input.readString();
+           System.out.println("Ingrese la marca de los audifonos");
+           marca = input.readString();
+           System.out.println("Ingrese el tipo de audifonos");
+           tipo = input.readString();
+           System.out.println("Ingrese el color de los audifonos");
+           color = input.readString();
+           System.out.println("Ingrese el codigo de barras");
+           codigoBarra = input.readInteger();
+           System.out.println("Ingrese el precio");
+           precio = input.readInteger();
+           
+       }
+       
+       return inventarioTabla;
+   }
    
 }

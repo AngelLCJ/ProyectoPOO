@@ -25,11 +25,13 @@ public class ZorzalMusic {
     public static void main(String[] args) {
         int opcion1 ;
         int opcion2;
-        Hashtable<Integer,Musica>inventarioMusica=new Hashtable<Integer,Musica>();
         Inventario inventario = new Inventario();
+        Hashtable<Integer,Musica>inventarioMusica=new Hashtable<Integer,Musica>();
         Hashtable<Integer,Video>inventarioVideo=new Hashtable<Integer,Video>();
+        Hashtable<Integer,Audifonos>inventarioAudifonos=new Hashtable<Integer,Audifonos>();
         inventario.inventarioMusicaMetodo(inventarioMusica);
         inventario.inventarioVideoMetodo(inventarioVideo);
+        inventario.inventarioAudifonosMetodo(inventarioAudifonos);
         
         do{
         KeyboardInput input  =new KeyboardInput();
@@ -52,32 +54,23 @@ public class ZorzalMusic {
                                 for(Musica valor: inventarioMusica.values()){
                                     System.out.println(valor);
                                 }
+                                break;
                             case 2:
                                 crearCrud.crearVideo(inventarioVideo);
                                 for(Video valorVideo: inventarioVideo.values()){
                                     System.out.println(valorVideo);
                                 }
-                            /*case 3:
-                                crearCrud.crearAudifonos();*/
+                                break;
+                            case 3:
+                                crearCrud.crearAudifonos(inventarioAudifonos);
+                                for(Video valorAudifonos: inventarioVideo.values()){
+                                    System.out.println(valorAudifonos);
+                                }
+                                break;
                         }
                     }
                     while(opcion2<4);
                     //crearCrud.CrearMusica();
-                case 2:
-                    Leer leerCrud = new Leer();
-                    System.out.println("¿Que catalogo deseas observar?");
-                    System.out.println("1)Catálogo General\t2)Catálogo Disco de m úsica\t3)Catálogo de disco de video\t4)Catálogo de audifonos");
-                    KeyboardInput input2=new KeyboardInput();
-                    opcion2=input.readInteger();
-                        switch(opcion2){
-                            case 1:
-                                
-                            case 2:
-                                for(Musica valor: inventarioMusica.values()){
-                                    System.out.println(valor);
-                                }
-                                //leerCrud.LeerMusica(inventarioMusica);
-                        }
                     
         }
         }while(opcion1<5);

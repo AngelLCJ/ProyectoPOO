@@ -18,11 +18,9 @@ public class Leer {
     }
     
     public Hashtable LeerMusica(Hashtable inventarioTabla){
-        for(Musica valor: inventarioTabla.values()){
+        /*for(Musica valor: inventarioTabla.values()){
             System.out.println(valor);
-        }
-    
-    
-    
+        }*/
+    return inventarioTabla;
     }
 }

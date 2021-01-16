@@ -7,6 +7,7 @@ package inventario;
 
 import java.util.ArrayList;
 import java.util.Hashtable;
+import productos.Audifonos;
 import productos.Musica;
 import productos.Video;
 import zorzalMusic.*;
@@ -123,6 +124,23 @@ public class Inventario {
         inventarioTabla.put(cd3.codigoBarra,cd3);
         inventarioTabla.put(cd4.codigoBarra,cd4);
         inventarioTabla.put(cd5.codigoBarra,cd5);
+        
+        return inventarioTabla;
+    }
+    
+    public Hashtable inventarioAudifonosMetodo(Hashtable inventarioTabla){
+        
+        Audifonos audifonos1 = new Audifonos("Negro","In Ear",3200,30001,"SE215","Shure");
+        Audifonos audifonos2 = new Audifonos("Blanco","Wireless",2200,30002,"Smokin Buds","Skullcandy");
+        Audifonos audifonos3 = new Audifonos("Negro/Azul","Over Ear",1600,30003,"porta Pro","Koss");
+        Audifonos audifonos4 = new Audifonos("Negro","Wireless",2500,30004,"HD 4 40","Sennheiser");
+        Audifonos audifonos5 = new Audifonos("Blanco","Wireless",5080,30005,"Solo Pro","Beats");
+        
+        inventarioTabla.put(audifonos1.codigoBarra,audifonos1);
+        inventarioTabla.put(audifonos2.codigoBarra,audifonos2);
+        inventarioTabla.put(audifonos3.codigoBarra,audifonos3);
+        inventarioTabla.put(audifonos4.codigoBarra,audifonos4);
+        inventarioTabla.put(audifonos5.codigoBarra,audifonos5);
         
         return inventarioTabla;
     }
