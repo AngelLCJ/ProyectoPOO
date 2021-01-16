@@ -41,7 +41,7 @@
                   <Component id="contra1" max="32767" attributes="0"/>
                   <Component id="contra2" alignment="0" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="170" max="32767" attributes="0"/>
+              <EmptySpace pref="172" max="32767" attributes="0"/>
           </Group>
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
