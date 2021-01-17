@@ -182,6 +182,7 @@ public class iniciarSesion extends javax.swing.JFrame{
             Usuario.requestFocus();
         }else{
             if(buscarArchivo(id) && buscarRegistro(contraseña, id)){
+                this.setVisible(false);
             }else{
                 JOptionPane.showMessageDialog(rootPane, "Contraseña o Usuario incorrectos");
             }
