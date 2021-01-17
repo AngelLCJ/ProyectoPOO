@@ -34,6 +34,8 @@ public class ZorzalMusic {
         inventario.inventarioAudifonosMetodo(inventarioAudifonos);
         aparatosDeAmbiente aparatos = new aparatosDeAmbiente();
         aparatos.musicPlayerMetodo(inventarioMusica);
+        aparatos.videoPlayerMetodo(inventarioMusica, inventarioVideo);
+        //aparatos.musicPlayerMetodo(inventarioMusica);
         do{
         KeyboardInput input  =new KeyboardInput();
         System.out.println("******* Crud *********\n");
