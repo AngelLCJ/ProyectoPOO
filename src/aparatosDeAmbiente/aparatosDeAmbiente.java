@@ -21,7 +21,7 @@ public class aparatosDeAmbiente {
     public aparatosDeAmbiente() {
     }
     
-    public void musicPlayerMetodo(Hashtable inventarioTabla){
+    public void musicPlayerMetodo(Hashtable inventarioTablaMusica, Hashtable inventarioTablaVideo){
         int opcionRep=0, codigoBarra=0;
         while(opcionRep<3){
             System.out.println("Seleccione la forma de reproduccion del disco");
@@ -32,16 +32,18 @@ public class aparatosDeAmbiente {
                 System.out.println("Esa opcion no existe");
                 break;
             }else if(opcionRep==3){
+                SeleccionadorDeAparatos  seleccionador = new SeleccionadorDeAparatos();
+                seleccionador.seleccionadorDeAparatosMetodo(inventarioTablaMusica, inventarioTablaVideo);
                 break;
             }
             System.out.println("Ingrese el codigo de barras del disco");
             codigoBarra=input.readInteger();
-            if (inventarioTabla.containsKey(codigoBarra)==true) {
+            if (inventarioTablaMusica.containsKey(codigoBarra)==true) {
             switch (opcionRep){
                 case 1:
                     Musica discoX;
                     ArrayList<String>canciones=new ArrayList<String>();
-                    discoX=(Musica)inventarioTabla.get(codigoBarra);
+                    discoX=(Musica)inventarioTablaMusica.get(codigoBarra);
                     canciones=discoX.getNombreCanciones();
                     System.out.println("Reproduciendo...");
                     for(String elemento: canciones){
@@ -59,7 +61,7 @@ public class aparatosDeAmbiente {
                     //Musica discoX;
                     System.out.println("Ingrese el numero de la cancion a reproducir");
                     numeroCancion = input.readInteger()-1;
-                    discoX=(Musica)inventarioTabla.get(codigoBarra);
+                    discoX=(Musica)inventarioTablaMusica.get(codigoBarra);
                     canciones=discoX.getNombreCanciones();
                     cancion= canciones.get(numeroCancion);
                     System.out.println("Reproduciendo...");
@@ -86,13 +88,16 @@ public class aparatosDeAmbiente {
         System.out.println("1) Disco de video\t2) Disco de musica 3) Salir al selector de aparatos de ambiente");
         KeyboardInput input=new KeyboardInput();
         opcionDisco=input.readInteger();
-        while(opcionDisco<3){
+        while(opcionDisco<4){
             if(opcionDisco>3){
                 System.out.println("Esa opcion no existe");
                 break;
             }else if(opcionDisco==3){
+                SeleccionadorDeAparatos  seleccionador = new SeleccionadorDeAparatos();
+                seleccionador.seleccionadorDeAparatosMetodo(inventarioTablaMusica, inventarioTablaVideo);
                 break;
             }
+            
             switch (opcionDisco) {
                 case 1:
                     Video discoX;
@@ -111,6 +116,8 @@ public class aparatosDeAmbiente {
                         //break;
                     }else{
                         System.out.println("Ese disco no existe");
+                        SeleccionadorDeAparatos  seleccionador = new SeleccionadorDeAparatos();
+                        seleccionador.seleccionadorDeAparatosMetodo(inventarioTablaMusica, inventarioTablaVideo);
                         //break;
                     }
                     opcionDisco=3;
@@ -127,6 +134,8 @@ public class aparatosDeAmbiente {
                             System.out.println("Esa opcion no existe");
                             break;
                         }else if(opcionRep==3){
+                            SeleccionadorDeAparatos  seleccionador = new SeleccionadorDeAparatos();
+                            seleccionador.seleccionadorDeAparatosMetodo(inventarioTablaMusica, inventarioTablaVideo);
                             break;
                         }
                         System.out.println("Ingrese el codigo de barras del disco");
@@ -170,6 +179,8 @@ public class aparatosDeAmbiente {
                     } 
                     else {
                         System.out.println("No existe ese disco");
+                        SeleccionadorDeAparatos  seleccionador = new SeleccionadorDeAparatos();
+                        seleccionador.seleccionadorDeAparatosMetodo(inventarioTablaMusica, inventarioTablaVideo);
                         }
                     }
                     opcionDisco=3;

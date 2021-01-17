@@ -33,8 +33,10 @@ public class ZorzalMusic {
         inventario.inventarioVideoMetodo(inventarioVideo);
         inventario.inventarioAudifonosMetodo(inventarioAudifonos);
         aparatosDeAmbiente aparatos = new aparatosDeAmbiente();
-        aparatos.musicPlayerMetodo(inventarioMusica);
-        aparatos.videoPlayerMetodo(inventarioMusica, inventarioVideo);
+        SeleccionadorDeAparatos seleccionador = new SeleccionadorDeAparatos();
+        seleccionador.seleccionadorDeAparatosMetodo(inventarioMusica, inventarioVideo);
+        //aparatos.musicPlayerMetodo(inventarioMusica);
+        //aparatos.videoPlayerMetodo(inventarioMusica, inventarioVideo);
         //aparatos.musicPlayerMetodo(inventarioMusica);
         do{
         KeyboardInput input  =new KeyboardInput();
