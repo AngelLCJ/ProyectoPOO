@@ -1,3 +1,4 @@
 Usuario = Angel
-Tipo = Gerente
+Tipo = 
+Gerente
 Contraseña = 123

@@ -1,0 +1,4 @@
+Usuario = Par
+Tipo = 
+Acomodador
+Contraseña = pan

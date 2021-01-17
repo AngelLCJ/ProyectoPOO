@@ -43,7 +43,7 @@ public class registro extends javax.swing.JFrame {
                     crearUbic.mkdirs();
                     Formatter crearForma = new Formatter(crearUbicacion + archivo);
                     crearForma.format("%s\r\n%s\r\n%s\r\n","Usuario = "+nombre.getText(), 
-                            "Tipo = "+tipoUsuario.getSelectedItem().toString(), 
+                            "Tipo = \n"+tipoUsuario.getSelectedItem().toString(), 
                             "Contraseña = "+contra2.getText().toString());
                     crearForma.close();
                     JOptionPane.showMessageDialog(rootPane, "Registro Exitoso");
@@ -53,7 +53,7 @@ public class registro extends javax.swing.JFrame {
             }
         }
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

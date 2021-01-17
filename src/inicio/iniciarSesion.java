@@ -9,13 +9,13 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import javax.swing.JOptionPane;
+import zorzalMusic .*;
 
 /**
  *
  * @author angel
  */
 public class iniciarSesion extends javax.swing.JFrame{
-
     /**
      * Creates new form iniciarSesion
      */
@@ -50,6 +50,52 @@ public class iniciarSesion extends javax.swing.JFrame{
             System.out.println(ex.getMessage());
         }
         return confirmado2;
+    }
+    
+    public boolean buscarTipoUsu(String id, String arch){
+        
+        String usu0, usu3;
+        boolean tipo = false;
+        boolean G=false, A=false, V=false;
+        String gerente, acomodador, vendedor;
+        gerente = "Gerente";
+        acomodador = "Acomodador";
+        vendedor = "Vendedor";
+        
+        arch += ".txt";
+        usu0 = "DatosTXT\\";
+        usu3 = usu0 + arch;
+       
+        File fichero = new File(usu3);      
+        String path = fichero.getAbsolutePath();
+        String usuario=id;
+        try
+        {
+            BufferedReader leer=new BufferedReader(new FileReader (path));
+            String linea="";
+            while((linea=leer.readLine())!=null)
+            {
+                if (linea.indexOf(usuario)!=-1)
+                {
+                    if(gerente.equals(linea)){
+                        G = true;
+                        tipo = G;
+                    }if(acomodador.equals(linea)){
+                        A = true;
+                        tipo = A;
+                    }if(vendedor.equals(linea)){
+                        V = true;
+                        tipo = V;
+                    }
+                }
+            }
+        }
+        catch(Exception ex)
+        {
+            System.out.println(ex.getMessage());
+        }
+        System.out.println(tipo);
+        return tipo;
     }
     
     public boolean  buscarArchivo(String usu){
@@ -173,7 +219,10 @@ public class iniciarSesion extends javax.swing.JFrame{
     private void aceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aceptarActionPerformed
         // TODO add your handling code here:
 
-        String id, contraseña;
+        String id, contraseña, gerente, acomodador, vendedor;
+        gerente = "Gerente";
+        acomodador = "Acomodador";
+        vendedor = "Vendedor";
         id = Usuario.getText();
         contraseña = pasword.getText().toString();
         if (Usuario.getText().equals("") || pasword.getText().equals("")){
@@ -183,6 +232,16 @@ public class iniciarSesion extends javax.swing.JFrame{
         }else{
             if(buscarArchivo(id) && buscarRegistro(contraseña, id)){
                 this.setVisible(false);
+                //
+                if(buscarTipoUsu(gerente,id)){
+                    JOptionPane.showMessageDialog(rootPane, "Bienvenido Gerente");
+                    Gerente llamada1 = new Gerente();
+                    llamada1.Gerente();
+                }if(buscarTipoUsu(acomodador,id)){
+                    JOptionPane.showMessageDialog(rootPane, "Bienvenido Acomodador");
+                }if(buscarTipoUsu(vendedor,id)){
+                    JOptionPane.showMessageDialog(rootPane, "Bienvenido Vendedor");
+                }
             }else{
                 JOptionPane.showMessageDialog(rootPane, "Contraseña o Usuario incorrectos");
             }

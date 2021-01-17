@@ -1,0 +1,4 @@
+Usuario = Hola
+Tipo = 
+Vendedor
+Contraseña = hola
