@@ -33,18 +33,24 @@ public class Ticket {
         try{
             br = new BufferedReader(new InputStreamReader(System.in));
             //texto = br.readLine();
+            Date d = new Date();
+            System.out.println(d);
             //System.out.println(texto);
-            Serializador fecha = new Serializador();
+            try{
+                FileOutputStream ticket = new FileOutputStream("TicketZM.txt");
+                ObjectOutputStream oos = new ObjectOutputStream(ticket);
+                oos.writeObject(d);
+                oos.close();
+            }catch(IOException ioe){}
             FileWriter fw = new FileWriter("TicketZM.txt");
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter salida =new PrintWriter(fw);
-            salida.println(fecha);
+            salida.println("\t\t\t\t\t"+d);
             salida.println("\t\t\t\t\t *****Zorzal Music***** \t\t\t\t\t");
             salida.println("\n Nº 1007, Perif. Blvd. Manuel Ávila Camacho, Hab Jardines de Santa Monica, 54055 Tlalnepantla de Baz, Méx.");
             salida.println("Quejas y sugerencias al numero: 800 000 0097");
             salida.println("========================================================================================================================");
             salida.println("lo atendio: ");
-            salida.println("");
             salida.println("\t\tProductos\t\t\n");
             salida.println(" ");
             salida.println("Total: $");
