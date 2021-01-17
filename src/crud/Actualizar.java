@@ -5,6 +5,7 @@
  */
 package crud;
 
+import java.util.ArrayList;
 import java.util.Hashtable;
 import productos.*;
 
@@ -78,7 +79,17 @@ public class Actualizar {
                         discoX.setNumCanciones(nuevoNumCanciones);
                         break;
                     case 7:
-                        
+                        ArrayList<String>cancionesNuevas=new ArrayList<String>();
+                        int indiceCancion;
+                        String nuevaCancion;
+                        System.out.println("Cual cancion deseas modifcar: ");
+                        indiceCancion=input.readInteger()-1;
+                        System.out.println("Ingrese el nuevo nombre ");
+                        nuevaCancion=input.readString();
+                        discoX=(Musica)inventarioTabla.get(codigoBarra);
+                        cancionesNuevas=discoX.getNombreCanciones();
+                        cancionesNuevas.set(indiceCancion, nuevaCancion);
+                        discoX.setNombreCanciones(cancionesNuevas);
                         break;
                     default:
                         System.out.println("Esa opcion no existe");

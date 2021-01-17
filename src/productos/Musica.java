@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class Musica extends Disco{
     //String nombreCanciones ;
-    ArrayList<String>nombreCanciones;
+    public ArrayList<String>nombreCanciones;
     
 
     public Musica() {
