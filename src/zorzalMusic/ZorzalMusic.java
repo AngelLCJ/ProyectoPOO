@@ -36,7 +36,7 @@ public class ZorzalMusic {
         do{
         KeyboardInput input  =new KeyboardInput();
         System.out.println("******* Crud *********\n");
-        System.out.println("1)Crear\t 2)Leer\t 3)Actualizar\t 4)Borrar\t\n");
+        System.out.println("1)Crear\t 2)Leer\t 3)Actualizar\t 4)Borrar\t5)Salir\n");
         System.out.println("Que opción desea realizar\n");
         //Object menu=new Object();
         opcion1 = input.readInteger();
@@ -45,7 +45,7 @@ public class ZorzalMusic {
                     do{
                         Crear crearCrud=new Crear();
                         System.out.println("¿Que producto deseas crear\n");
-                        System.out.println("1) Disco de musica\t2) Disco de video\t3) Audifonos");
+                        System.out.println("1) Disco de musica\t2) Disco de video\t3) Audifonos\t 4) Salir");
                         KeyboardInput input2=new KeyboardInput();
                         opcion2=input.readInteger();
                         switch(opcion2){
@@ -67,6 +67,9 @@ public class ZorzalMusic {
                                     System.out.println(valorAudifonos);
                                 }
                                 break;
+                            case 4:
+                                System.out.println("Saliendo al menu de CRUD");
+                                break;
                             } 
                                 
                         }  while(opcion2<4);
@@ -76,7 +79,7 @@ public class ZorzalMusic {
                     do{
                     //Leer leerCrud = new Leer();
                     System.out.println("¿Que catalogo deseas observar?");
-                    System.out.println("1)Catálogo General\t2)Catálogo Disco de música\t3)Catálogo de disco de video\t4)Catálogo de audifonos");
+                    System.out.println("1)Catálogo General\t2)Catálogo Disco de música\t3)Catálogo de disco de video\t4)Catálogo de audifonos\5) Salir al menu de CRUD");
                     KeyboardInput input2=new KeyboardInput();
                     opcion2=input.readInteger();
                     switch(opcion2){
@@ -114,6 +117,9 @@ public class ZorzalMusic {
                                     System.out.println(valor);
                                 }
                                 break;
+                            case 5:
+                                System.out.println("Saliendo al menu de CRUD");
+                                break;
                        }
                     }while(opcion2<5);
                     break;
@@ -121,7 +127,7 @@ public class ZorzalMusic {
                     do {                        
                         Actualizar actualizarCrud = new Actualizar();
                         System.out.println("¿Que producto deseas actualizar?\n");
-                        System.out.println("1) Disco de musica\t2) Disco de video\t3) Audifonos");
+                        System.out.println("1) Disco de musica\t2) Disco de video\t3) Audifonos\4) Salir al menu de CRUD");
                         KeyboardInput input2=new KeyboardInput();
                         opcion2=input.readInteger();
                         switch(opcion2){
@@ -143,6 +149,9 @@ public class ZorzalMusic {
                                     System.out.println(valorAudifonos);
                                 }
                                 break;
+                            case 4:
+                                System.out.println("Saliendo al menu de CRUD");
+                                break;
                             }
                     } while(opcion2 < 4);
                     break;
@@ -150,7 +159,7 @@ public class ZorzalMusic {
                     do{
                         Borrar borrarCrud=new Borrar();
                         System.out.println("¿Que producto deseas borrar\n");
-                        System.out.println("1) Disco de musica\t2) Disco de video\t3) Audifonos");
+                        System.out.println("1) Disco de musica\t2) Disco de video\t3) Audifonos\t 4) Salir al menu de CRUD");
                         KeyboardInput input2=new KeyboardInput();
                         opcion2=input.readInteger();
                         switch(opcion2){
@@ -172,9 +181,18 @@ public class ZorzalMusic {
                                     System.out.println(valor);
                                 }
                                 break;
+                            case 4:
+                                System.out.println("Saliendo al menu de CRUD");
+                                break;
                             } 
                     }while(opcion2<4);
                     break;
+                case 5:
+                    System.out.println("Hasta luego");
+                    break;
+                default:
+                    System.out.println("Esa opcion no existe");
+                    
             }
         }while(opcion1<5);
     }

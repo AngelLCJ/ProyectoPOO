@@ -15,7 +15,7 @@ public class Crear {
 
     public Crear() {
     }
-    public Hashtable crearEmpleado(){
+    public void crearEmpleado(){
        String nombre, puesto, contraseña;
        
     }
