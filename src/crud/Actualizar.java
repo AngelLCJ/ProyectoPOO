@@ -20,6 +20,7 @@ public class Actualizar {
     public Hashtable actualizarMusica(Hashtable inventarioTabla){
         int numDiscos,opcion2,codigoBarra;
         Musica discoX;
+        Object objetoN;
         
         System.out.println("¿Cuantos discos deseas actualizar?");
         KeyboardInput input=new KeyboardInput();
@@ -35,19 +36,49 @@ public class Actualizar {
                 opcion2=input.readInteger();
                 switch (opcion2){
                     case 1:
-                        
+                        String nuevoNombre;
+                        System.out.println("Ingrese el nuevo nombre del album");
+                        nuevoNombre=input.readString();
+                        discoX = (Musica) inventarioTabla.get(codigoBarra);
+                        discoX.setNombre(nuevoNombre);
                         break;
                     case 2:
+                        String nuevoArtista;
+                        System.out.println("Ingrese el nuevo nombre del artista");
+                        nuevoArtista=input.readString();
+                        discoX = (Musica) inventarioTabla.get(codigoBarra);
+                        discoX.setArtista(nuevoArtista);
                         break;
                     case 3:
+                        String nuevaDisquera;
+                        System.out.println("Ingrese el nuevo nombre de la disquera");
+                        nuevaDisquera=input.readString();
+                        discoX = (Musica) inventarioTabla.get(codigoBarra);
+                        discoX.setMarca(nuevaDisquera);
                         break;
                     case 4:
+                        int nuevoPrecio;
+                        System.out.println("Ingrese el nuevo precio");
+                        nuevoPrecio=input.readInteger();
+                        discoX = (Musica) inventarioTabla.get(codigoBarra);
+                        discoX.setPrecio(nuevoPrecio);
                         break;
                     case 5:
+                        int nuevoCodigoBarra;
+                        System.out.println("Ingrese el nuevo codigo de barras");
+                        nuevoCodigoBarra=input.readInteger();
+                        discoX = (Musica) inventarioTabla.get(codigoBarra);
+                        discoX.setCodigoBarra(nuevoCodigoBarra);
                         break;
                     case 6:
+                        int nuevoNumCanciones;
+                        System.out.println("Ingrese el nuevo numero de canciones");
+                        nuevoNumCanciones=input.readInteger();
+                        discoX = (Musica) inventarioTabla.get(codigoBarra);
+                        discoX.setNumCanciones(nuevoNumCanciones);
                         break;
                     case 7:
+                        
                         break;
                     default:
                         System.out.println("Esa opcion no existe");
