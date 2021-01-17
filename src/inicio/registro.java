@@ -4,18 +4,54 @@
  * and open the template in the editor.
  */
 package inicio;
+import java.io.IOException;
+import java.io.File;
+import java.util.Formatter;
+import javax.swing.JOptionPane;
+import zorzalMusic.*;
+
+
 
 /**
  *
  * @author angel
  */
 public class registro extends javax.swing.JFrame {
+    
+    String barra = File.separator;
+    String crearUbicacion = System.getProperty("user.dir")+barra+"DatosTXT"+barra;
 
     /**
      * Creates new form registro
      */
     public registro() {
         initComponents();
+    }
+    
+    private void crear(){
+        String archivo = nombre.getText()+".txt";
+        File crearUbic = new File(crearUbicacion);
+        File crearArchi = new File(crearUbicacion + archivo);
+        
+        if(nombre.getText().equals("")){
+            JOptionPane.showMessageDialog(rootPane, "No existe usuario");
+        }else{
+            try{
+                if(crearArchi.exists()){
+                    JOptionPane.showMessageDialog(rootPane, "El usuario ya se encuentra registrado");
+                }else{
+                    crearUbic.mkdirs();
+                    Formatter crearForma = new Formatter(crearUbicacion + archivo);
+                    crearForma.format("%s\r\n%s\r\n%s\r\n","Usuario = "+nombre.getText(), 
+                            "Tipo = "+tipoUsuario.getSelectedItem().toString(), 
+                            "Contraseña = "+contra2.getText().toString());
+                    crearForma.close();
+                    JOptionPane.showMessageDialog(rootPane, "Registro Exitoso");
+                }
+            }catch(Exception e){
+                JOptionPane.showMessageDialog(rootPane, "Registro Incorrecto");
+            }
+        }
     }
 
     /**
@@ -31,7 +67,7 @@ public class registro extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        usuario = new javax.swing.JTextField();
+        nombre = new javax.swing.JTextField();
         contra1 = new javax.swing.JPasswordField();
         jLabel5 = new javax.swing.JLabel();
         contra2 = new javax.swing.JPasswordField();
@@ -53,9 +89,14 @@ public class registro extends javax.swing.JFrame {
 
         jLabel3.setText("Contraseña:");
 
-        usuario.addKeyListener(new java.awt.event.KeyAdapter() {
+        nombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nombreActionPerformed(evt);
+            }
+        });
+        nombre.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                usuarioKeyTyped(evt);
+                nombreKeyTyped(evt);
             }
         });
 
@@ -93,7 +134,7 @@ public class registro extends javax.swing.JFrame {
                     .addComponent(jLabel3))
                 .addGap(42, 42, 42)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(usuario)
+                    .addComponent(nombre)
                     .addComponent(tipoUsuario, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(contra1)
                     .addComponent(contra2))
@@ -113,7 +154,7 @@ public class registro extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(usuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
@@ -145,29 +186,41 @@ public class registro extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         String cadena1, cadena2, cadena3, cadena4;
+        boolean a;
         
-        cadena1 = usuario.getText();
+        cadena1 = nombre.getText();
         cadena2 = contra1.getText().toString();
         cadena3 = contra2.getText().toString();
         cadena4 = tipoUsuario.getSelectedItem().toString();
-        if (((usuario.getText().equals("") || contra1.getText().equals("")) || contra2.getText().equals("")) || (tipoUsuario.getSelectedItem().equals(null))) {
+        if (((nombre.getText().equals("") || contra1.getText().equals("")) || contra2.getText().equals("")) || (tipoUsuario.getSelectedItem().equals(null))) {
             
             javax.swing.JOptionPane.showMessageDialog(this,"Debe llenar todos los campos \n","AVISO!",javax.swing.JOptionPane.INFORMATION_MESSAGE);
-            usuario.requestFocus();
-        }
-        if(contra1.getText() != contra2.getText()){
-            javax.swing.JOptionPane.showMessageDialog(this, "Las contraseñas no coinciden \n", "AVISO!",javax.swing.JOptionPane.INFORMATION_MESSAGE);
-        }
-        
+            nombre.requestFocus();
+        }else{
+            if(cadena2.equals(cadena3)){
+                this.setVisible(false);
+                crear();
+            }else{
+                javax.swing.JOptionPane.showMessageDialog(this, "Las contraseñas no coinciden \n", "AVISO!",javax.swing.JOptionPane.INFORMATION_MESSAGE);
+            }            
+        } 
+        nombre.setText("");
+        contra2.setText("");
+        contra1.setText("");
+        tipoUsuario.setSelectedItem("");
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void usuarioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_usuarioKeyTyped
+    private void nombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nombreKeyTyped
         // TODO add your handling code here:
         char c = evt.getKeyChar();
         if((c < 'a' || c > 'z') && (c < 'A' || c > 'Z') && (c < ' ' || c > ' ')){
             evt.consume();
         }
-    }//GEN-LAST:event_usuarioKeyTyped
+    }//GEN-LAST:event_nombreKeyTyped
+
+    private void nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nombreActionPerformed
 
     /**
      * @param args the command line arguments
@@ -212,7 +265,7 @@ public class registro extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JTextField nombre;
     private javax.swing.JComboBox<String> tipoUsuario;
-    private javax.swing.JTextField usuario;
     // End of variables declaration//GEN-END:variables
 }

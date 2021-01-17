@@ -5,17 +5,78 @@
  */
 package inicio;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author angel
  */
-public class iniciarSesion extends javax.swing.JFrame {
+public class iniciarSesion extends javax.swing.JFrame{
 
     /**
      * Creates new form iniciarSesion
      */
     public iniciarSesion() {
         initComponents();
+    }
+    public boolean buscarRegistro(String contra, String id){
+        
+        boolean confirmado2 = false;
+        String usu0, usu3;
+        id += ".txt";
+        usu0 = "DatosTXT\\";
+        usu3 = usu0 + id;
+        
+        File fichero = new File(usu3);      
+        String path = fichero.getAbsolutePath();
+        String usuario=contra;
+        try
+        {
+            BufferedReader leer=new BufferedReader(new FileReader (path));
+            String linea="";
+            while((linea=leer.readLine())!=null)
+            {
+                if (linea.indexOf(usuario)!=-1)
+                {
+                    confirmado2 = true;
+                }
+            }
+        }
+        catch(Exception ex)
+        {
+            System.out.println(ex.getMessage());
+        }
+        return confirmado2;
+    }
+    
+    public boolean  buscarArchivo(String usu){
+       
+        String usu0, usu3;
+        usu += ".txt";
+        usu0 = "DatosTXT\\";
+        usu3 = usu0;
+        
+        File fichero = new File(usu3);      
+        String path = fichero.getAbsolutePath();
+
+        String files;
+        boolean confirmado = false;
+        File folder = new File(path);
+        File[] listOfFiles = folder.listFiles();
+        
+        for (int i = 0; i < listOfFiles.length; i++){
+
+            if (listOfFiles[i].isFile()){
+                files = listOfFiles[i].getName();
+                if(files.equals(usu)){
+                    confirmado = true;
+                }
+            }
+        }
+        return confirmado;
     }
 
     /**
@@ -28,25 +89,112 @@ public class iniciarSesion extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        pasword = new javax.swing.JPasswordField();
+        Usuario = new javax.swing.JTextField();
+        aceptar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inicio/imagenes/Imagen3.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
+        jLabel1.setText("Ingrese su usuario:");
+
+        jLabel3.setText("Contraseña:");
+
+        pasword.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                paswordActionPerformed(evt);
+            }
+        });
+
+        Usuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UsuarioActionPerformed(evt);
+            }
+        });
+        Usuario.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                UsuarioKeyTyped(evt);
+            }
+        });
+
+        aceptar.setText("Aceptar");
+        aceptar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                aceptarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 850, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel1))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(pasword)
+                    .addComponent(Usuario)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(aceptar)))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 453, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Usuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(pasword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(aceptar)
+                .addContainerGap(27, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void UsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsuarioActionPerformed
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_UsuarioActionPerformed
+
+    private void paswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paswordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_paswordActionPerformed
+
+    private void aceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aceptarActionPerformed
+        // TODO add your handling code here:
+
+        String id, contraseña;
+        id = Usuario.getText();
+        contraseña = pasword.getText().toString();
+        if (Usuario.getText().equals("") || pasword.getText().equals("")){
+           javax.swing.JOptionPane.showMessageDialog(this,
+                   "Debe llenar todos los campos \n","AVISO!",javax.swing.JOptionPane.INFORMATION_MESSAGE);
+            Usuario.requestFocus();
+        }else{
+            if(buscarArchivo(id) && buscarRegistro(contraseña, id)){
+            }else{
+                JOptionPane.showMessageDialog(rootPane, "Contraseña o Usuario incorrectos");
+            }
+        }        
+    }//GEN-LAST:event_aceptarActionPerformed
+
+    private void UsuarioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_UsuarioKeyTyped
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+        if((c < 'a' || c > 'z') && (c < 'A' || c > 'Z') && (c < ' ' || c > ' ')){
+            evt.consume();
+        }
+    }//GEN-LAST:event_UsuarioKeyTyped
 
     /**
      * @param args the command line arguments
@@ -84,6 +232,10 @@ public class iniciarSesion extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField Usuario;
+    private javax.swing.JButton aceptar;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPasswordField pasword;
     // End of variables declaration//GEN-END:variables
 }
