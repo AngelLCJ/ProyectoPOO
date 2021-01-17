@@ -9,7 +9,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import javax.swing.JOptionPane;
-import zorzalMusic .*;
+import empleados .*;
 
 /**
  *
@@ -94,7 +94,6 @@ public class iniciarSesion extends javax.swing.JFrame{
         {
             System.out.println(ex.getMessage());
         }
-        System.out.println(tipo);
         return tipo;
     }
     
@@ -186,7 +185,7 @@ public class iniciarSesion extends javax.swing.JFrame{
                     .addGroup(layout.createSequentialGroup()
                         .addGap(24, 24, 24)
                         .addComponent(aceptar)))
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addContainerGap(57, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -201,7 +200,7 @@ public class iniciarSesion extends javax.swing.JFrame{
                     .addComponent(pasword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(aceptar)
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
 
         pack();

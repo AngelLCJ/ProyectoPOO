@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package empleados;
+import aparatosDeAmbiente.*;
 
 /**
  *
@@ -11,4 +12,9 @@ package empleados;
  */
 public class Acomodador {
     
+    public void Acomodador(){
+        aparatosDeAmbiente llamadaFun = new aparatosDeAmbiente();
+        //llamadaFun.musicPlayerMetodo(inventarioTabla);
+       
+    }
 }
