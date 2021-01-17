@@ -103,7 +103,78 @@ public class Actualizar {
     }
     
     public Hashtable actualizarVideo(Hashtable inventarioTabla){
+        int numDiscos,opcion2,codigoBarra;
+        Video discoX;
         
+        System.out.println("¿Cuantos discos deseas actualizar?");
+        KeyboardInput input=new KeyboardInput();
+        numDiscos = input.readInteger();
+        for (int i = 0; i < numDiscos; i++) {
+            System.out.println("Ingrese el codigo de barras del disco a actualizar");
+            KeyboardInput input1=new KeyboardInput();
+            codigoBarra=input.readInteger();
+            if(inventarioTabla.containsKey(codigoBarra)==true){
+                System.out.println("¿Cual caracteristica deseas actualizar de disco "+(i+1)+"?\n");
+                System.out.println("1) Nombre del disco de video\n2) Nombre del artista\n3) Disquera\n4) Precio\n5) Codigo de barras\n6) Numero de canciones\n7) Duracion");
+                KeyboardInput input2=new KeyboardInput();
+                opcion2=input.readInteger();
+                switch (opcion2) {
+                    case 1:
+                        String nuevoNombre;
+                        System.out.println("Ingrese el nuevo nombre del disco de musica");
+                        nuevoNombre=input.readString();
+                        discoX = (Video) inventarioTabla.get(codigoBarra);
+                        discoX.setNombre(nuevoNombre);
+                        break;
+                    case 2:
+                        String nuevoArtista;
+                        System.out.println("Ingrese el nuevo nombre del artista");
+                        nuevoArtista=input.readString();
+                        discoX = (Video) inventarioTabla.get(codigoBarra);
+                        discoX.setArtista(nuevoArtista);
+                        break;
+                    case 3:
+                        String nuevaDisquera;
+                        System.out.println("Ingrese el nuevo nombre de la disquera");
+                        nuevaDisquera=input.readString();
+                        discoX = (Video) inventarioTabla.get(codigoBarra);
+                        discoX.setMarca(nuevaDisquera);
+                        break;
+                    case 4:
+                        float nuevoPrecio;
+                        System.out.println("Ingrese el nuevo precio");
+                        nuevoPrecio=input.readFloat();
+                        discoX = (Video) inventarioTabla.get(codigoBarra);
+                        discoX.setPrecio(nuevoPrecio);
+                        break;
+                    case 5:
+                        int nuevoCodigoBarra;
+                        System.out.println("Ingrese el nuevo codigo de barras");
+                        nuevoCodigoBarra=input.readInteger();
+                        discoX = (Video) inventarioTabla.get(codigoBarra);
+                        discoX.setCodigoBarra(nuevoCodigoBarra);
+                        break;
+                    case 6:
+                        int nuevoNumCanciones;
+                        System.out.println("Ingrese el nuevo numero de canciones");
+                        nuevoNumCanciones=input.readInteger();
+                        discoX = (Video) inventarioTabla.get(codigoBarra);
+                        discoX.setNumCanciones(nuevoNumCanciones);
+                        break;
+                    case 7:
+                        int nuevaDuracion;
+                        System.out.println("Ingrese la nueva duracion");
+                        nuevaDuracion=input.readInteger();
+                        discoX = (Video) inventarioTabla.get(codigoBarra);
+                        discoX.setDuracion(nuevaDuracion);
+                        break;
+                    default:
+                        System.out.println("Esa opcion no existe");
+                }
+            }else{
+                System.out.println("El codigo de barras ingresado no existe");
+            }
+        }
         return inventarioTabla;
     }
     
