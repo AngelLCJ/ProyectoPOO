@@ -70,6 +70,7 @@ public class ZorzalMusic {
                             } 
                                 
                         }  while(opcion2<4);
+                    break;
                     //crearCrud.CrearMusica();
                 case 2:
                     do{
@@ -115,6 +116,7 @@ public class ZorzalMusic {
                                 break;
                        }
                     }while(opcion2<5);
+                    break;
                 case 3:
                     do {                        
                         Actualizar actualizarCrud = new Actualizar();
@@ -137,12 +139,13 @@ public class ZorzalMusic {
                                 break;
                             case 3:
                                 actualizarCrud.actualizarAudifonos(inventarioAudifonos);
-                                for(Video valorAudifonos: inventarioVideo.values()){
+                                for(Audifonos valorAudifonos: inventarioAudifonos.values()){
                                     System.out.println(valorAudifonos);
                                 }
                                 break;
                             }
                     } while(opcion2 < 4);
+                    break;
                 case 4:
                     do{
                         Borrar borrarCrud=new Borrar();

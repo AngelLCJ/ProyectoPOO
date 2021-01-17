@@ -108,8 +108,77 @@ public class Actualizar {
     }
     
     public Hashtable actualizarAudifonos(Hashtable inventarioTabla){
+        int numDiscos,opcion2,codigoBarra;
+        Audifonos discoX;
+        Object objetoN;
         
+        System.out.println("¿Cuantos audifonos deseas actualizar?");
+        KeyboardInput input=new KeyboardInput();
+        numDiscos = input.readInteger();
+        for (int i = 0; i < numDiscos; i++) {
+            System.out.println("Ingrese el codigo de barras de los audifonos a actualizar");
+            KeyboardInput input1=new KeyboardInput();
+            codigoBarra=input.readInteger();
+            if(inventarioTabla.containsKey(codigoBarra)==true){
+                System.out.println("¿Cual caracteristica deseas actualizar de los audifonos "+(i+1)+"?\n");
+                System.out.println("1) Nombre \n2) Marca\n3) Precio\n4) Color\n5) Codigo de barras\n6) Tipo\n");
+                KeyboardInput input2=new KeyboardInput();
+                opcion2=input.readInteger();
+                switch (opcion2){
+                    case 1:
+                        String nuevoNombre;
+                        System.out.println("Ingrese el nuevo nombre de los audifonos");
+                        nuevoNombre=input.readString();
+                        discoX = (Audifonos) inventarioTabla.get(codigoBarra);
+                        discoX.setNombre(nuevoNombre);
+                        break;
+                    case 2:
+                        String nuevoMarca;
+                        System.out.println("Ingrese el nuevo nombre de la marca");
+                        nuevoMarca=input.readString();
+                        discoX = (Audifonos) inventarioTabla.get(codigoBarra);
+                        discoX.setMarca(nuevoMarca);
+                        break;
+                    case 3:
+                        float nuevoPrecio;
+                        System.out.println("Ingrese el nuevo precio");
+                        nuevoPrecio=input.readFloat();
+                        discoX = (Audifonos) inventarioTabla.get(codigoBarra);
+                        discoX.setPrecio(nuevoPrecio);
+                        break;
+                    case 4:
+                        String nuevoColor;
+                        System.out.println("Ingrese el nuevo precio");
+                        nuevoColor= input.readString();
+                        discoX = (Audifonos) inventarioTabla.get(codigoBarra);
+                        discoX.setColor(nuevoColor);
+                        break;
+                    case 5:
+                        int nuevoCodigoBarra;
+                        System.out.println("Ingrese el nuevo codigo de barras");
+                        nuevoCodigoBarra=input.readInteger();
+                        discoX = (Audifonos) inventarioTabla.get(codigoBarra);
+                        discoX.setCodigoBarra(nuevoCodigoBarra);
+                        break;
+                    case 6:
+                        String nuevoTipo;
+                        System.out.println("Ingrese el nuevo numero de canciones");
+                        nuevoTipo = input.readString();
+                        discoX = (Audifonos) inventarioTabla.get(codigoBarra);
+                        discoX.setTipo(nuevoTipo);
+                        break;
+                    default:
+                        System.out.println("Esa opcion no existe");
+                       
+                }
+            }else{
+                System.out.println("El codigo de barras ingreasdo no existe");
+            }
+            
+        }
         return inventarioTabla;
+    
+     
     }
     
 }
