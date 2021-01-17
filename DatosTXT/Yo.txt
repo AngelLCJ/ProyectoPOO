@@ -1,3 +1,0 @@
-Usuario = Yo
-Tipo = Acomodador
-Contraseña = 1234

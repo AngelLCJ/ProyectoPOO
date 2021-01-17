@@ -1,3 +1,0 @@
-Usuario = Raul
-Tipo = Gerente
-Contraseña = 1234

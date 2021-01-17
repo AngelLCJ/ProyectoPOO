@@ -32,7 +32,8 @@ public class ZorzalMusic {
         inventario.inventarioMusicaMetodo(inventarioMusica);
         inventario.inventarioVideoMetodo(inventarioVideo);
         inventario.inventarioAudifonosMetodo(inventarioAudifonos);
-        
+        aparatosDeAmbiente aparatos = new aparatosDeAmbiente();
+        aparatos.musicPlayerMetodo(inventarioMusica);
         do{
         KeyboardInput input  =new KeyboardInput();
         System.out.println("******* Crud *********\n");
@@ -84,7 +85,7 @@ public class ZorzalMusic {
                     opcion2=input.readInteger();
                     switch(opcion2){
                         case 1:
-                                System.out.println("Discos de Música");
+                                  System.out.println("Discos de Música");
                                  for(Musica valor: inventarioMusica.values()){
                                     System.out.println(valor);
                                 }
