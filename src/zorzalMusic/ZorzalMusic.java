@@ -36,17 +36,17 @@ public class ZorzalMusic {
         inventario.inventarioAudifonosMetodo(inventarioAudifonos);
         aparatosDeAmbiente aparatos = new aparatosDeAmbiente();
         SeleccionadorDeAparatos seleccionador = new SeleccionadorDeAparatos();
-        //seleccionador.seleccionadorDeAparatosMetodo(inventarioMusica, inventarioVideo);
+        seleccionador.seleccionadorDeAparatosMetodo(inventarioMusica, inventarioVideo);
         //aparatos.musicPlayerMetodo(inventarioMusica);
         //aparatos.videoPlayerMetodo(inventarioMusica, inventarioVideo);
         //aparatos.musicPlayerMetodo(inventarioMusica);
-        Caja caja = new Caja();
+        /*Caja caja = new Caja();
         caja.cajaMetodo(inventarioMusica, inventarioVideo, inventarioAudifonos, listaVenta);
         for(Producto valorVideo: listaVenta.values()){
             System.out.println("Nombre del Producto: "+ valorVideo.getNombre()+ " Codigo de Barra: " + valorVideo.getCodigoBarra() +" Precio: $"+ valorVideo.getPrecio());
         }
         Ticket ticket = new Ticket();
-        ticket.ticketMetodo(listaVenta);
+        ticket.ticketMetodo(listaVenta);*/
         do{
         KeyboardInput input  =new KeyboardInput();
         System.out.println("******* Crud *********\n");
