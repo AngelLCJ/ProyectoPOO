@@ -72,10 +72,6 @@ public class Caja {
     public Hashtable cajaMetodo(Hashtable inventarioMusica, Hashtable inventarioVideo, Hashtable inventarioAudifonos, Hashtable listaVenta){
         int numOpcion = 0;
         int numProd, codigoBarra;
-        /*System.out.println("¿Cual accion desea realizar?");
-        System.out.println("1) Buscar/vender\t2) Salir al menu principal");
-        KeyboardInput input = new KeyboardInput();
-        numOpcion = input.readInteger();*/
         while(numOpcion<3){
             System.out.println("¿Cual accion desea realizar?");
             System.out.println("1) Buscar/vender\t2) Salir al menu principal");

@@ -29,7 +29,7 @@ public class Ticket {
     public Ticket(){
     }
 
-    public void ticketMetodo(Hashtable listaVenta) {
+    public void ticketMetodo(Hashtable listaVenta, float importe, float total) {
         String nombreProducto;
         int codigoBarra;
         float precio;
@@ -66,9 +66,15 @@ public class Ticket {
             salida.println("\t\tProductos\t\t\n");
             for(Producto producto1: lista.values()){
                 salida.println(producto1.getNombre()+ " " + producto1.getCodigoBarra() +" \t $" + producto1.getPrecio());
-             }
-            salida.println("Total: $");
-            salida.println("Cambio: $");
+            }
+            //float total = 0;
+            /*for(Producto producto1: lista.values()){
+                total += producto1.getPrecio();
+            }*/
+            salida.println("Total: $"+total);
+            float cambio;
+            cambio=importe-total;
+            salida.println("Cambio: $"+cambio);
             salida.println("Muchas gracias por su compra");
             salida.println("Codigo de Barras");
             salida.println("\t\t||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ");
