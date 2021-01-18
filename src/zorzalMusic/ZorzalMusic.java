@@ -17,6 +17,7 @@ import productos.*;
 import crud.*;
 import inventario.*;
 import java.util.Hashtable;
+import caja.*;
 public class ZorzalMusic {
 
     /**
@@ -29,15 +30,21 @@ public class ZorzalMusic {
         Hashtable<Integer,Musica>inventarioMusica=new Hashtable<Integer,Musica>();
         Hashtable<Integer,Video>inventarioVideo=new Hashtable<Integer,Video>();
         Hashtable<Integer,Audifonos>inventarioAudifonos=new Hashtable<Integer,Audifonos>();
+        Hashtable<Integer,Producto> listaVenta = new Hashtable<Integer,Producto>();
         inventario.inventarioMusicaMetodo(inventarioMusica);
         inventario.inventarioVideoMetodo(inventarioVideo);
         inventario.inventarioAudifonosMetodo(inventarioAudifonos);
         aparatosDeAmbiente aparatos = new aparatosDeAmbiente();
         SeleccionadorDeAparatos seleccionador = new SeleccionadorDeAparatos();
-        seleccionador.seleccionadorDeAparatosMetodo(inventarioMusica, inventarioVideo);
+        //seleccionador.seleccionadorDeAparatosMetodo(inventarioMusica, inventarioVideo);
         //aparatos.musicPlayerMetodo(inventarioMusica);
         //aparatos.videoPlayerMetodo(inventarioMusica, inventarioVideo);
         //aparatos.musicPlayerMetodo(inventarioMusica);
+        Caja caja = new Caja();
+        caja.cajaMetodo(inventarioMusica, inventarioVideo, inventarioAudifonos, listaVenta);
+        for(Producto valorVideo: listaVenta.values()){
+            System.out.println(valorVideo);
+        }
         do{
         KeyboardInput input  =new KeyboardInput();
         System.out.println("******* Crud *********\n");
