@@ -248,8 +248,6 @@ public class Actualizar {
             
         }
         return inventarioTabla;
-    
-     
     }
     
 }
