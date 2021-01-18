@@ -34,6 +34,7 @@ public class Ticket {
         int codigoBarra;
         float precio;
         Producto producto= new Producto();
+        Hashtable <Integer,Producto>lista=listaVenta;
         try{
             File archivo = new File("TicketZM.txt");
             boolean seCreo = archivo.createNewFile();
@@ -63,18 +64,9 @@ public class Ticket {
             salida.println("========================================================================================================================");
             salida.println("lo atendio: ");
             salida.println("\t\tProductos\t\t\n");
-           /* for(Object producto1: listaVenta.values()){
-                String nombreX;
-                int  codigoBarraX;
-                float precioX;
-                nombreX = valor.getNombre();
-                codigoBarraX = valor.getCodigoBarra();
-                precioX = valor.getPrecio();
+            for(Producto producto1: lista.values()){
                 salida.println(producto1.getNombre()+ " " + producto1.getCodigoBarra() +" \t $" + producto1.getPrecio());
-            //System.out.println(valorVideo.getPrecio());
-            //System.out.println(valorVideo.getCodigoBarra());
-             }*/
-            salida.println(listaVenta);
+             }
             salida.println("Total: $");
             salida.println("Cambio: $");
             salida.println("Muchas gracias por su compra");

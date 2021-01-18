@@ -103,7 +103,7 @@ public class Caja {
                             precioX = productoX.getPrecio();
                             System.out.println("El producto es: "+nombreProductoX+". El precio es: "+precioX);
                             System.out.println("¿Desea vender el producto");
-                            System.out.println("1) Sí\n 2) No");
+                            System.out.println("1) Sí\n2) No");
                             venta = input.readInteger();
                             if(venta == 1){
                                 listaVenta.put(productoX.codigoBarra,productoX);
@@ -121,7 +121,7 @@ public class Caja {
                             precioX = productoX.getPrecio();
                             System.out.println("El producto es: "+nombreProductoX+". El precio es: "+precioX);
                             System.out.println("¿Desea vender el producto");
-                            System.out.println("1) Sí\n 2) No");
+                            System.out.println("1) Sí\n2) No");
                             venta = input.readInteger();
                             if(venta == 1){
                                 listaVenta.put(productoX.codigoBarra,productoX);
@@ -139,7 +139,7 @@ public class Caja {
                             precioX = productoX.getPrecio();
                             System.out.println("El producto es: "+nombreProductoX+". El precio es: "+precioX);
                             System.out.println("¿Desea vender el producto");
-                            System.out.println("1) Sí\n 2) No");
+                            System.out.println("1) Sí\n2) No");
                             venta = input.readInteger();
                             if(venta == 1){
                                 listaVenta.put(productoX.codigoBarra,productoX);
