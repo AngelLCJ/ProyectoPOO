@@ -1,0 +1,4 @@
+Usuario = Vanessa
+Tipo = 
+Acomodador
+Contraseña = 4567

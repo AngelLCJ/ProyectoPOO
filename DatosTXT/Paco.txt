@@ -1,0 +1,4 @@
+Usuario = Paco
+Tipo = 
+Vendedor
+Contraseña = 1234

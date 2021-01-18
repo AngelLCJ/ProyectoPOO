@@ -22,6 +22,7 @@ public class iniciarSesion extends javax.swing.JFrame{
     public iniciarSesion() {
         initComponents();
     }
+    
     public boolean buscarRegistro(String contra, String id){
         
         boolean confirmado2 = false;
@@ -239,8 +240,12 @@ public class iniciarSesion extends javax.swing.JFrame{
                     llamada1.Gerente();
                 }if(buscarTipoUsu(acomodador,id)){
                     JOptionPane.showMessageDialog(rootPane, "Bienvenido Acomodador");
+                    Acomodador llamada2 = new Acomodador();
+                    llamada2.Acomodador();
                 }if(buscarTipoUsu(vendedor,id)){
                     JOptionPane.showMessageDialog(rootPane, "Bienvenido Vendedor");
+                    Vendedor llamada3 = new Vendedor();
+                    llamada3.Vendedor();
                 }
             }else{
                 JOptionPane.showMessageDialog(rootPane, "Contraseña o Usuario incorrectos");

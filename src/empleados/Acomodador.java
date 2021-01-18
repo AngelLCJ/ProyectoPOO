@@ -16,10 +16,8 @@ import zorzalMusic.KeyboardInput;
  * @author perry
  */
 public class Acomodador {
-    public static void main(String[] args) {
-        
-    
-    //public void Acomodador(){
+
+    public void Acomodador(){
        int opcion1 ;
         int opcion2;
         Inventario inventario = new Inventario();
