@@ -16,13 +16,24 @@ import java.io.InputStreamReader;
 import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
 import java.util.Date;
+import java.util.Hashtable;
+import productos.*;
 
 /**
  *
  * @author perry
  */
 public class Ticket {
-    public static void main(String[] args) {
+   // public static void main(String[] args) {
+    
+    public Ticket(){
+    }
+
+    public void ticketMetodo(Hashtable listaVenta) {
+        String nombreProducto;
+        int codigoBarra;
+        float precio;
+        Producto producto= new Producto();
         try{
             File archivo = new File("TicketZM.txt");
             boolean seCreo = archivo.createNewFile();
@@ -52,7 +63,18 @@ public class Ticket {
             salida.println("========================================================================================================================");
             salida.println("lo atendio: ");
             salida.println("\t\tProductos\t\t\n");
-            salida.println(" ");
+           /* for(Object producto1: listaVenta.values()){
+                String nombreX;
+                int  codigoBarraX;
+                float precioX;
+                nombreX = valor.getNombre();
+                codigoBarraX = valor.getCodigoBarra();
+                precioX = valor.getPrecio();
+                salida.println(producto1.getNombre()+ " " + producto1.getCodigoBarra() +" \t $" + producto1.getPrecio());
+            //System.out.println(valorVideo.getPrecio());
+            //System.out.println(valorVideo.getCodigoBarra());
+             }*/
+            salida.println(listaVenta);
             salida.println("Total: $");
             salida.println("Cambio: $");
             salida.println("Muchas gracias por su compra");
@@ -67,17 +89,16 @@ public class Ticket {
         
         try{
             
-             FileReader fw = new FileReader("TicketZM.txt");
-             br = new BufferedReader(fw);
-             System.out.println("Generando ticket");
-             System.out.println("el contenido del Ticket es: ");
-             String linea = br.readLine();
-             while(linea != null){
-                 System.out.println(linea);
-                 linea = br.readLine();
-             }
-             br.close();
+            FileReader fw = new FileReader("TicketZM.txt");
+            br = new BufferedReader(fw);
+            System.out.println("Generando ticket");
+            System.out.println("el contenido del Ticket es: ");
+            String linea = br.readLine();
+            while(linea != null){
+                System.out.println(linea);
+                linea = br.readLine();
+            }
+            br.close();
         }catch(IOException ioe){}
-        
     }
 }
