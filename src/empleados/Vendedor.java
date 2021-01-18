@@ -18,10 +18,8 @@ import zorzalMusic.KeyboardInput;
  * @author perry
  */
 public class Vendedor {
-    public static void main(String[] args) {
-        
     
-    //public void Vendedor() {
+    public void Vendedor() {
         int opcion1 ;
         int opcion2;
         Inventario inventario = new Inventario();
