@@ -113,6 +113,8 @@ public class Crear {
            System.out.println("Ingrese el precio");
            precio = input.readInteger();
            
+           Audifonos audifonosX = new Audifonos(color, tipo, precio, codigoBarra, nombre, marca);
+           inventarioTabla.put(audifonosX.codigoBarra,audifonosX);
        }
        
        return inventarioTabla;

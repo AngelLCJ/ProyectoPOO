@@ -1,0 +1,4 @@
+Usuario = Luis
+Tipo = 
+Gerente
+Contraseña = 123456

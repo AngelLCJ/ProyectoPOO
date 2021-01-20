@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package inicio;
+import caja.Ticket;
+import empleados.Gerente;
 import java.io.IOException;
 import java.io.File;
 import java.util.Formatter;
@@ -52,6 +54,8 @@ public class registro extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(rootPane, "Registro Incorrecto");
             }
         }
+       /* Gerente usuario = new Gerente();
+        usuario.envioArchivo(crearArchi);*/
     }
     
     /**

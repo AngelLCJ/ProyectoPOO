@@ -71,7 +71,7 @@ public class Gerente extends Empleado {
                                                 break;
                                             case 3:
                                                 crearCrud.crearAudifonos(inventarioAudifonos);
-                                                for(Video valorAudifonos: inventarioVideo.values()){
+                                                for(Audifonos valorAudifonos: inventarioAudifonos.values()){
                                                     System.out.println(valorAudifonos);
                                                 }
                                                 break;

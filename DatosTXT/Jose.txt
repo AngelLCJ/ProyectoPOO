@@ -1,0 +1,4 @@
+Usuario = Jose
+Tipo = 
+Vendedor
+Contraseña = 12345

@@ -55,10 +55,14 @@ public class aparatosDeAmbiente {
                     System.out.println(canciones);
                     break;
                 case 2:
-                    int numeroCancion;
+                    int numeroCancion,i=1;
                     String cancion;
-                    //ArrayList<String>canciones=new ArrayList<String>();
-                    //Musica discoX;
+                    discoX=(Musica)inventarioTablaMusica.get(codigoBarra);
+                    canciones=discoX.getNombreCanciones();
+                     for(String elemento: canciones){
+                            System.out.println(i +". "+ elemento); 
+                            i += 1;
+                    }
                     System.out.println("Ingrese el numero de la cancion a reproducir");
                     numeroCancion = input.readInteger()-1;
                     discoX=(Musica)inventarioTablaMusica.get(codigoBarra);
