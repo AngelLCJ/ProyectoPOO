@@ -1,0 +1,4 @@
+Usuario = mick
+Tipo = 
+Gerente
+Contraseña = 12

@@ -1,0 +1,4 @@
+Usuario = a
+Tipo = 
+Gerente
+Contraseña = 1

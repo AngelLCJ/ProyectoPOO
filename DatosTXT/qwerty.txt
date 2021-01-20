@@ -1,0 +1,4 @@
+Usuario = qwerty
+Tipo = 
+Vendedor
+Contraseña = 12

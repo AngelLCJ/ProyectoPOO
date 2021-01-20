@@ -1,0 +1,4 @@
+Usuario = queen
+Tipo = 
+Gerente
+Contraseña = 1

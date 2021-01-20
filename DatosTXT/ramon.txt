@@ -1,0 +1,4 @@
+Usuario = ramon
+Tipo = 
+Vendedor
+Contraseña = 1234

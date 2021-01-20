@@ -62,7 +62,7 @@ public class Ticket {
             salida.println("\n Nº 1007, Perif. Blvd. Manuel Ávila Camacho, Hab Jardines de Santa Monica, 54055 Tlalnepantla de Baz, Méx.");
             salida.println("Quejas y sugerencias al numero: 800 000 0097");
             salida.println("========================================================================================================================");
-            salida.println("lo atendio: ");
+            salida.println("lo atendio: " + usuario);
             salida.println("\t\tProductos\t\t\n");
             for(Producto producto1: lista.values()){
                 salida.println(producto1.getNombre()+ " " + producto1.getCodigoBarra() +" \t $" + producto1.getPrecio());
