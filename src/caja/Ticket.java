@@ -29,7 +29,7 @@ public class Ticket {
     public Ticket(){
     }
 
-    public void ticketMetodo(Hashtable listaVenta, float importe, float total) {
+    public void ticketMetodo(Hashtable listaVenta, float importe, float total, String usuario) {
         String nombreProducto;
         int codigoBarra;
         float precio;

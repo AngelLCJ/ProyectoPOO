@@ -8,6 +8,7 @@ package caja;
 import aparatosDeAmbiente.SeleccionadorDeAparatos;
 import java.util.ArrayList;
 import java.util.Hashtable;
+import java.util.Iterator;
 import productos.*;
 import zorzalMusic.KeyboardInput;
 
@@ -69,7 +70,7 @@ public class Caja {
         }
     }
     
-    public Hashtable cajaMetodo(Hashtable inventarioMusica, Hashtable inventarioVideo, Hashtable inventarioAudifonos, Hashtable listaVenta){
+    public Hashtable cajaMetodo(Hashtable inventarioMusica, Hashtable inventarioVideo, Hashtable inventarioAudifonos, Hashtable listaVenta, String usuario){
         int numOpcion = 0;
         int numProd, codigoBarra;
         while(numOpcion<3){
@@ -147,7 +148,29 @@ public class Caja {
                             System.out.println("El producto no existe");
                             }
                         }
+                        float importe;
+                        //KeyboardInput input = new KeyboardInput();
+                        float total = 0;
+                        for (Iterator it = listaVenta.values().iterator(); it.hasNext();) {
+                            Producto producto1 = (Producto) it.next();
+                            total += producto1.getPrecio();
+                        }
+                        if(total>0){
+                            System.out.println("El monto a pagar es: "+total);
+                            System.out.println("Ingrese el importe recibido");
+                            importe=input.readFloat();
+                            if(importe>=total){
+                                Ticket ticket = new Ticket();
+                                ticket.ticketMetodo(listaVenta,importe,total,usuario);
+                                listaVenta.clear();
+                            }else{
+                            System.out.println("La compra no se puedo realizar, porque el importe es insuficiente");
+                            }
+                        }else{
+                            System.out.println("No hay nada en lista venta, no hay transaccion por realizar, gracias.");
+                        }
                         break;
+
                     case 2:
                         break;
                     default:

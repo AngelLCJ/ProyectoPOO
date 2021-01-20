@@ -19,7 +19,7 @@ import zorzalMusic.KeyboardInput;
  */
 public class Vendedor {
     
-    public void Vendedor() {
+    public void Vendedor(String usuario) {
         int opcion1 ;
         int opcion2;
         Inventario inventario = new Inventario();
@@ -45,25 +45,11 @@ public class Vendedor {
                     seleccionador.seleccionadorDeAparatosMetodo(inventarioMusica, inventarioVideo);
                     break;
                 case 2:
-                    caja.cajaMetodo(inventarioMusica, inventarioVideo, inventarioAudifonos, listaVenta);
+                    caja.cajaMetodo(inventarioMusica, inventarioVideo, inventarioAudifonos, listaVenta, usuario);
                     for(Producto valorVideo: listaVenta.values()){
                         System.out.println("Nombre del Producto: "+ valorVideo.getNombre()+ " Codigo de Barra: " + valorVideo.getCodigoBarra() +" Precio: $"+ valorVideo.getPrecio());
                     }
-                    float importe;
-                    KeyboardInput input = new KeyboardInput();
-                    float total = 0;
-                    for(Producto producto1: listaVenta.values()){
-                        total += producto1.getPrecio();
-                    }
-                    System.out.println("El monto a pagar es: "+total);
-                    System.out.println("Ingrese el importe recibido");
-                    importe=input.readFloat();
-                    if(importe>=total){
-                        Ticket ticket = new Ticket();
-                        ticket.ticketMetodo(listaVenta,importe,total);
-                    }else{
-                        System.out.println("La compra no se puedo realizar, porque el importe es insuficiente");
-                    }
+                    
                     break;
                 case 3:
                     System.out.println("¡Hasta luego!");

@@ -237,7 +237,7 @@ public class iniciarSesion extends javax.swing.JFrame{
                 if(buscarTipoUsu(gerente,id)){
                     JOptionPane.showMessageDialog(rootPane, "Bienvenido Gerente");
                     Gerente llamada1 = new Gerente();
-                    llamada1.Gerente();
+                    llamada1.Gerente(id);
                 }if(buscarTipoUsu(acomodador,id)){
                     JOptionPane.showMessageDialog(rootPane, "Bienvenido Acomodador");
                     Acomodador llamada2 = new Acomodador();
@@ -245,7 +245,7 @@ public class iniciarSesion extends javax.swing.JFrame{
                 }if(buscarTipoUsu(vendedor,id)){
                     JOptionPane.showMessageDialog(rootPane, "Bienvenido Vendedor");
                     Vendedor llamada3 = new Vendedor();
-                    llamada3.Vendedor();
+                    llamada3.Vendedor(id);
                 }
             }else{
                 JOptionPane.showMessageDialog(rootPane, "Contraseña o Usuario incorrectos");
