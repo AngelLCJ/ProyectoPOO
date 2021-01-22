@@ -9,7 +9,17 @@ import java.util.Hashtable;
 
 /**
  *
- * @author carlos
+ * @author Correa Juárez Ángel Leonardo
+ * @author Cruz Martínez Raúl
+ * @author Mendoza Bolaños Carlos Gabriel
+ * @author Villanueva Corona Miguel Ángel
+ * 
+ * Borrar es una clase del apartado de crud en la cual solo tiene acceso el gerente de la tienda de musica, entes apartado del 
+ * CRUD lo que se decea realizar como dice su nombre borrar algun producto del inventario de la tienda esto es por si algun producto no se encuentra
+ * en existencia no siga estando en las tablas del inventario. Para empezar el programa le solicita al gerente que ingrese que producto es el que
+ * decea borrar, ya sea que quiera alguno de los dos tipos de discos que cuenta el inventario o borrar unos audifonos, despues de seleccionar alguno
+ * de estos productos a borrar se le pide la cantidad de productos a borrar, con esta informacion se le soliita al gerente que ingrese
+ * el codigo de barras del producto a eliminar de la tabla para que ya por ultimo muestre un listado con los productos que quedan sin eliminar
  */
 public class Borrar {
 

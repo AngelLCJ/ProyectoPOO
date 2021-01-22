@@ -1,0 +1,4 @@
+Usuario = e
+Tipo = 
+Acomodador
+Contraseña = 1

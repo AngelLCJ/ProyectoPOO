@@ -7,7 +7,11 @@ package inicio;
 
 /**
  *
- * @author angel
+ * @author Correa Juárez Ángel Leonardo
+ * @author Cruz Martínez Raúl
+ * @author Mendoza Bolaños Carlos Gabriel
+ * @author Villanueva Corona Miguel Ángel
+ * 
  */
 public class login extends javax.swing.JFrame {
 

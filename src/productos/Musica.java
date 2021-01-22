@@ -9,7 +9,12 @@ import java.util.ArrayList;
 
 /**
  *
- * @author perry
+ * @author Correa Juárez Ángel Leonardo
+ * @author Cruz Martínez Raúl
+ * @author Mendoza Bolaños Carlos Gabriel
+ * @author Villanueva Corona Miguel Ángel
+ * 
+ * En esta clase hereda de disco alguno de sus atributos ademas en esta clase disco se crean constructores, getters, setters y to string.
  */
 public class Musica extends Disco{
     //String nombreCanciones ;

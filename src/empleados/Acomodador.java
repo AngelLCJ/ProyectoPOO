@@ -13,7 +13,14 @@ import zorzalMusic.KeyboardInput;
 
 /**
  *
- * @author perry
+ * @author Correa Juárez Ángel Leonardo
+ * @author Cruz Martínez Raúl
+ * @author Mendoza Bolaños Carlos Gabriel
+ * @author Villanueva Corona Miguel Ángel
+ * 
+ * En esta clase lo que se raliza es el acomo de los permisos con los cuales el acomodador tendra acceso al sistema, como
+ * fue estipulado el acomodador solo podra tener permiso para poner canciones en los aparatos de ambiente es por esto que 
+ * en esta clase es donde le damos el acceso a este menu.
  */
 public class Acomodador {
 

@@ -7,7 +7,13 @@ package productos;
 
 /**
  *
- * @author carlos
+ * @author Correa Juárez Ángel Leonardo
+ * @author Cruz Martínez Raúl
+ * @author Mendoza Bolaños Carlos Gabriel
+ * @author Villanueva Corona Miguel Ángel
+ * 
+ * En esta clase hereda de producto alguno de sus atributos ademas de que de esta se pueden heredar otras dos clases
+ * en esta clase disco se crean constructores, getters, setters y to string.
  */
 public class Disco extends Producto{
     String artista;

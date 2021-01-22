@@ -13,10 +13,13 @@ import javax.swing.JOptionPane;
 import zorzalMusic.*;
 
 
-
 /**
  *
- * @author angel
+ * @author Correa Juárez Ángel Leonardo
+ * @author Cruz Martínez Raúl
+ * @author Mendoza Bolaños Carlos Gabriel
+ * @author Villanueva Corona Miguel Ángel
+ * 
  */
 public class registro extends javax.swing.JFrame {
     

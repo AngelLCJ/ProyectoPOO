@@ -12,7 +12,16 @@ import java.util.Hashtable;
 import zorzalMusic.*;
 /**
  *
- * @author angel
+ * @author Correa Juárez Ángel Leonardo
+ * @author Cruz Martínez Raúl
+ * @author Mendoza Bolaños Carlos Gabriel
+ * @author Villanueva Corona Miguel Ángel
+ * 
+ * Crear es una clase de tipo Crud en la cual el gerente puede crear cualquier producto de los tres diferentes tipos 
+ * esto se realizo con la ayuda de for para poder generar un menu interactivo en el cual el usuario en este caso el gerente
+ * va ingresar el numero correspondiente con el producto a crear,despues pregunta cual es la cantidad de productos deceas crear
+ * ,siguiente a eso se le pide al gerente que ingrese los datos importantes del producto dentro de los apartados indicados
+ * despues todos los datos racabados los almacena durante la ejecucion en una tabla hash la cual usamos para el inventario
  */
 public class Crear {
     

@@ -14,7 +14,14 @@ import zorzalMusic.*;
 
 /**
  *
- * @author espar
+ * @author Correa Juárez Ángel Leonardo
+ * @author Cruz Martínez Raúl
+ * @author Mendoza Bolaños Carlos Gabriel
+ * @author Villanueva Corona Miguel Ángel
+ * 
+ * en este codigo hacemos el inventario en tablas hash para las canciones lo unico que hacemos es una array list en la cual se van 
+ * a guardar todos sus atributos del disco y agregamos los nombres de las canciones en las tablas hash para poder introducirlo 
+ * sus nombres, con los otros dos tipos de productos hacemos tablas hash para guardar sus datos
  */
 public class Inventario {
 

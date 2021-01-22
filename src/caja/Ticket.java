@@ -21,7 +21,20 @@ import productos.*;
 
 /**
  *
- * @author perry
+ * @author Correa Juárez Ángel Leonardo
+ * @author Cruz Martínez Raúl
+ * @author Mendoza Bolaños Carlos Gabriel
+ * @author Villanueva Corona Miguel Ángel
+ * 
+ * 
+ * En esta clase lo que se trata de ralizar es una representacion de un ticket el cual al momento de ejecutarlo con ayuda de 
+ * un main lo que se va a generar es un archivo con extencion .txt en la cual va imprimir lo que se genero en las lineas de codigo
+ * lo cual contiene: nombre de la tienda, hora de expedicion, los productos con sus respectivos precios, el total acumulado,
+ * el cambio con respecto al monto con el que se hayan pagado los productos, el nombre del empleado que atendio al cliente,
+ * entre otras cosas, para poder realizar este codigo para generar los tiquets nos tuvimos que apoyar de la utilidad de los archivos 
+ * ya que con este codigo podemos crear el archivo que lleva por nombre "TicketZM.txt" en el cual tambien se le agregara lo anterior
+ * mencionado algunas implementaciones son simples impreciones en el ticket mientras que otros apartados tuvimos que realizar otras
+ * clases con las cuales hacer lo restante,por ejemplo la imprecion del nombre del trabajador dentro del ticket.
  */
 public class Ticket {
    // public static void main(String[] args) {

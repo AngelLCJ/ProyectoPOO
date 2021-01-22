@@ -7,7 +7,14 @@ package productos;
 
 /**
  *
- * @author perry
+ * @author Correa Juárez Ángel Leonardo
+ * @author Cruz Martínez Raúl
+ * @author Mendoza Bolaños Carlos Gabriel
+ * @author Villanueva Corona Miguel Ángel
+ * 
+ * aqui se generan la clase audifonos con sus respectivos constructores, getters y setters y to string,
+ * esta clase hereda de producto el cual contiene el nombre, precio, marca, etc. esta clase los atributos que contiene 
+ * son el color y el tipo de audifonos
  */
 public class Audifonos extends Producto {
     String color, tipo;

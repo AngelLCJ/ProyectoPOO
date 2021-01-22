@@ -10,7 +10,16 @@ import zorzalMusic.KeyboardInput;
 
 /**
  *
- * @author espar
+ * @author Correa Juárez Ángel Leonardo
+ * @author Cruz Martínez Raúl
+ * @author Mendoza Bolaños Carlos Gabriel
+ * @author Villanueva Corona Miguel Ángel
+ * 
+ * en este apartado lo que decea hacer es un menu en el cual su estructura esta hecha con un switch en el que 
+ * al usuario va a escojer si decea como reproductor un music player o un video payer o en su defecto salir de esta parte del programa
+ * despues de que el usuario escoja alguna de estas dos opciones (descartando la antes mencionada)se le va a mandar a un menu
+ * diferido en el cual se le va a preguntar que decea reproducir en dicho aparato de ambiente, la cuestion del menu se va explicar mas a fondo 
+ * en la clase de aparatos de ambiente en la cual vamos a aplicar una estructura con switchs para implementarlo.
  */
 public class SeleccionadorDeAparatos {
 

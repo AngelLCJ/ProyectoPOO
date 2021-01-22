@@ -15,9 +15,15 @@ import zorzalMusic.KeyboardInput;
 
 /**
  *
- * @author perry
+ * @author Correa Juárez Ángel Leonardo
+ * @author Cruz Martínez Raúl
+ * @author Mendoza Bolaños Carlos Gabriel
+ * @author Villanueva Corona Miguel Ángel
+ * 
+ * En la clase gerente se le da acceso a todo el menu ya que este puede acceder al CRUD, a los aparatos de ambiente y 
+ * a la caja, esto se realizo con ayuda de las otras clases que tenian que ver con estos apartados cada una 
  */
-public class Gerente extends Empleado {
+public class Gerente {
     
     public void Gerente(String usuario) {
         int opcion1 ;

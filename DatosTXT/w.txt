@@ -1,0 +1,4 @@
+Usuario = w
+Tipo = 
+Vendedor
+Contraseña = 1

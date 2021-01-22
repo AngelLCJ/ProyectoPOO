@@ -15,7 +15,14 @@ import zorzalMusic.KeyboardInput;
 
 /**
  *
- * @author perry
+ * @author Correa Juárez Ángel Leonardo
+ * @author Cruz Martínez Raúl
+ * @author Mendoza Bolaños Carlos Gabriel
+ * @author Villanueva Corona Miguel Ángel
+ * 
+ * En la clase vendedor se le da acceso a solo una parte del menu ya que este no puede acceder al CRUD,pero 
+ * si a los demas apartados del programa cestos menus son los siguientes, los aparatos de ambiente y 
+ * a la caja, esto se realizo con ayuda de las otras clases contenidas en diferentes paquetes
  */
 public class Vendedor {
     

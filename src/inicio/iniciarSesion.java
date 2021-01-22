@@ -13,7 +13,11 @@ import empleados .*;
 
 /**
  *
- * @author angel
+ * @author Correa Juárez Ángel Leonardo
+ * @author Cruz Martínez Raúl
+ * @author Mendoza Bolaños Carlos Gabriel
+ * @author Villanueva Corona Miguel Ángel
+ * 
  */
 public class iniciarSesion extends javax.swing.JFrame{
     /**

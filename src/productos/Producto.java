@@ -7,7 +7,13 @@ package productos;
 
 /**
  *
- * @author perry
+ * @author Correa Juárez Ángel Leonardo
+ * @author Cruz Martínez Raúl
+ * @author Mendoza Bolaños Carlos Gabriel
+ * @author Villanueva Corona Miguel Ángel
+ * 
+ * La clase producto va a ser la clase en la que vamos a partir para generar los otros tipos de productos
+ * en esta clase lo que se va a generar son getters, setters, to string y constructores
  */
 public class Producto {
     public int codigoBarra;

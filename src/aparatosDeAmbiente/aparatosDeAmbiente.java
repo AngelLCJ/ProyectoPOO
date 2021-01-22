@@ -14,7 +14,21 @@ import productos.Video;
 import zorzalMusic.KeyboardInput;
 /**
  *
- * @author angel
+ * @author Correa Juárez Ángel Leonardo
+ * @author Cruz Martínez Raúl
+ * @author Mendoza Bolaños Carlos Gabriel
+ * @author Villanueva Corona Miguel Ángel
+ * 
+ * En esta clase lo que se decea lograr es hacer un menu para los aparatos de ambiente en los cuales se le va a preguntar a los 
+ * usuarios que es lo que decean realizar en cuanto reproducir ya sea una cancion o un video, dicha cancion o video deve de 
+ * estar contenida dentro del inventario de discos ya que si esta no se encuentra en existencia el programa va a mandar un mensaje
+ * explicando que el disco que ingreso no esta en existencia, ambos reproductores tienen sus opciones el primero es el music player
+ * en el cual se le van a dar tres opciones en la primera encontraremos que la opcion es reproducir el disco completo la segunda
+ * a su vez es la reproduccion individual en la cual se le pide al usuario que ingrese el codigo de barras del disco y el numero de
+ * la cancion a reproducir, ya por ultimo nos encontramos con la opcion de salir de este menu que te saca al saleccionador de
+ * aparatos de ambientes, en seguida tenemos al videoplayer el cual tiene un menu similar al de music player ya que este puede
+ * reproducir va a pedir lo mismo antes mencionado, ademas, este menu da la opcion de reproducir los discos de video que se encuentren
+ * en el inventario de la tienda.
  */
 public class aparatosDeAmbiente {
 

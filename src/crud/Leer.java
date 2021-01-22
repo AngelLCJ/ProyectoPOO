@@ -10,7 +10,16 @@ import productos.Musica;
 
 /**
  *
- * @author carlos
+ * @author Correa Juárez Ángel Leonardo
+ * @author Cruz Martínez Raúl
+ * @author Mendoza Bolaños Carlos Gabriel
+ * @author Villanueva Corona Miguel Ángel
+ * 
+ * 
+ * Leer es una clase en donde el gerente puede visualizar el contenido del inventario dentro de las tablas hash, para esto
+ * primero se le pregunta que tipo de inventario quiere leer y hay 4 opciones excluyendo la salida, estas opciones de lectura
+ * son el inventario general, el inventario de musica, el de videos y por ultimo el de audifonos, estos inventarios se realizaron 
+ * con ayuda de las tablas hash
  */
 public class Leer {
 

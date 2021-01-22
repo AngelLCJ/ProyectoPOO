@@ -11,7 +11,18 @@ import productos.*;
 
 /**
  *
- * @author espar
+ * @author Correa Juárez Ángel Leonardo
+ * @author Cruz Martínez Raúl
+ * @author Mendoza Bolaños Carlos Gabriel
+ * @author Villanueva Corona Miguel Ángel
+ * 
+ * 
+ * actualizar es una clase en la cual lo que se decea que el usuario en este caso el gerente ya que es el unico que tiene los permisos para acceder a estos
+ * apartados del CRUD en este especificamente lo que se realiza es la actualizacion de algunos productos que se encuentran 
+ * en el inventario ya sea si es por que se escribio mal algun apartado de algun documento o en el caso de que cambie algunos de los datos del
+ * producto, en esta parte de todo el proyecto se le da a escojer al gerente que decea actualizar ya sea el un disco de video o de musica o en lo contrario
+ * unos audifonos despues de preguntarle que decea actualizar le va a preguntar por cada uno de los atributos del producto acerca de que apartado decea modificar,
+ * despues los cambios van a aparecer en una tabla (Realizado con tablas hash) la modificacion que se le hizo al producto
  */
 public class Actualizar {
 

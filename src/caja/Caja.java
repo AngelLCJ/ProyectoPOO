@@ -14,62 +14,20 @@ import zorzalMusic.KeyboardInput;
 
 /**
  *
- * @author perry
+ * @author Correa Juárez Ángel Leonardo
+ * @author Cruz Martínez Raúl
+ * @author Mendoza Bolaños Carlos Gabriel
+ * @author Villanueva Corona Miguel Ángel
+ * 
+ * en esta clase lo que se decea realizar es la representacion de una caja registradora en la cual se van a registrar 
+ * los prductos que se decen comprar, estos productos contienen un precio el cual se va a acomular con los demas productos 
+ * que se vayan adquiriendo hasta generar un precio total de todos los productos a comprar, despues de determinar la cantidad 
+ * de productos a comprar se le pedira al usuario que ingrese el monto con el cual se van a pagar los productos que decea,
+ * despues de todo esto se genera un ticket con ayuda de archivos que en una parte de este contiene todos los apartados antes mencionados
+ * de manera desglosada, empezando por los productos que se decean adquirir, seguido de el monto a pagar y el cambio total que se le regresa
+ * al usuario.
  */
 public class Caja {
-    float precio,cambio,precioT,pago;
-
-    public Caja() {
-    }
-
-    public Caja(float precio, float cambio, float precioT, float pago) {
-        this.precio = precio;
-        this.cambio = cambio;
-        this.precioT = precioT;
-        this.pago = pago;
-    }
-
-    public float getPrecio() {
-        return precio;
-    }
-
-    public void setPrecio(float precio) {
-        this.precio = precio;
-    }
-
-    public float getCambio() {
-        return cambio;
-    }
-
-    public void setCambio(float cambio) {
-        this.cambio = cambio;
-    }
-
-    public float getPrecioT() {
-        return precioT;
-    }
-
-    public void setPrecioT(float precioT) {
-        this.precioT = precioT;
-    }
-
-    public float getPago() {
-        return pago;
-    }
-
-    public void setPago(float pago) {
-        this.pago = pago;
-    }
-
-    public void Pagar(){
-        precioT=precio++;
-        if(precioT==pago){
-            cambio=0;
-        }else{
-           cambio=pago-precioT;
-        }
-    }
-    
     public Hashtable cajaMetodo(Hashtable inventarioMusica, Hashtable inventarioVideo, Hashtable inventarioAudifonos, Hashtable listaVenta, String usuario){
         int numOpcion = 0;
         int numProd, codigoBarra;
