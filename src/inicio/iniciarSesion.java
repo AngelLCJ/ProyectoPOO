@@ -18,7 +18,8 @@ import empleados .*;
  * @author Mendoza Bolaños Carlos Gabriel
  * @author Villanueva Corona Miguel Ángel
  * 
- * En esta clase lo que se hace  
+ * En esta clase lo que se hace  es que se ingresa al usuario si es que se 
+ * encuantra registrado en la base de datos.
  */
 public class iniciarSesion extends javax.swing.JFrame{
     /**
