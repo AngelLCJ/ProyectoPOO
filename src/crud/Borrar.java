@@ -25,6 +25,12 @@ public class Borrar {
 
     public Borrar() {
     }
+    /**
+     * 
+     * @param inventario es el inventario el cual se le eliminará los elementos 
+     * deseados con ayuda del código de barras.
+     * @return el inventario con los elemnetos eliminados.
+     */
     public Hashtable borrarElemento(Hashtable inventario){
         System.out.println("¿Cuantos elmentos deseas eliminar?");
         KeyboardInput input= new KeyboardInput();

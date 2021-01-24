@@ -28,13 +28,19 @@ public class Crear {
    public Crear(){ 
        
    }
+   /**
+    * 
+    * @param inventarioTabla Es el inventario al cual se le le añadirá uno o 
+    * varios discos de música.
+    * de música
+    * @return el inventario el cual contendra los discos de música creados.
+    */
    public Hashtable crearMusica(Hashtable inventarioTabla){
        int numDiscos;
        ArrayList nombreCanciones;
        String artista, nombre, marca; 
        int numCanciones, codigoBarra;
        float precio;
-       ///alkjslkjalsk
        
        System.out.println("¿Cuantos discos de musica desea crear?");
        KeyboardInput input=new KeyboardInput();
@@ -66,7 +72,12 @@ public class Crear {
        }
    return inventarioTabla;
    }
-   
+   /**
+    * 
+    * @param inventarioTabla Es el inventario al cual se le le añadirá uno o 
+    * varios discos de video.
+    * @return el inventario el cual contendra los discos de video creados.
+    */
    public Hashtable crearVideo(Hashtable inventarioTabla){
        int numDiscos, duracion, numCanciones, codigoBarra;
        float precio;
@@ -98,7 +109,12 @@ public class Crear {
        
        return inventarioTabla;
    }
-   
+   /**
+    * 
+    * @param inventarioTabla Es el inventario al cual se le le añadirá uno o 
+    * varios audífonos.
+    * @return el inventario el cual contendra los audífonos creados.
+    */
    public Hashtable crearAudifonos(Hashtable inventarioTabla){
        String color, tipo, nombre, marca;
        int codigoBarra, numAudifonos;

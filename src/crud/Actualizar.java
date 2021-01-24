@@ -30,8 +30,10 @@ public class Actualizar {
     }
     /**
      * 
-     * @param inventarioTabla
-     * @return Hashtable, es el inventario de musica
+     * @param inventarioTabla Se le pasa un Hashtable el cual contiene el 
+     * inventario en el cual se le actualizará el o los  discos de música 
+     * deseados.
+     * @return retorna el invetario actualizado.
      */
     public Hashtable actualizarMusica(Hashtable inventarioTabla){
         int numDiscos,opcion2,codigoBarra;
@@ -116,7 +118,13 @@ public class Actualizar {
         }
         return inventarioTabla;
     }
-    
+    /**
+     * 
+     * @param inventarioTabla Se le pasa un Hashtable el cual contiene el 
+     * inventario en el cual se le actualizará el o los  discos de videos
+     * deseados. 
+     * @return retorna el inventario actualizado.
+     */
     public Hashtable actualizarVideo(Hashtable inventarioTabla){
         int numDiscos,opcion2,codigoBarra;
         Video discoX;
@@ -192,7 +200,13 @@ public class Actualizar {
         }
         return inventarioTabla;
     }
-    
+    /**
+     * 
+     * @param inventarioTabla Se le pasa un Hashtable el cual contiene el 
+     * inventario en el cual se le actualizará el o los  audifonos 
+     * deseados.
+     * @return retorna el inventario actualizado.
+     */
     public Hashtable actualizarAudifonos(Hashtable inventarioTabla){
         int numDiscos,opcion2,codigoBarra;
         Audifonos discoX;
