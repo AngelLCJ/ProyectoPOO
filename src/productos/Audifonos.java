@@ -130,7 +130,7 @@ public class Audifonos extends Producto {
         this.marca = marca;
     }
     /**
-     * Método toString que nos devuelve la información gneral de audifonos.
+     * Método toString que nos devuelve la información general de audifonos.
      * @return información de audifonos, es de tipo String.
      */
     @Override
