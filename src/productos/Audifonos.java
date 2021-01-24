@@ -129,7 +129,10 @@ public class Audifonos extends Producto {
     public void setMarca(String marca) {
         this.marca = marca;
     }
-
+    /**
+     * Método toString que nos devuelve la información gneral de audifonos.
+     * @return información de audifonos, es de tipo String.
+     */
     @Override
     public String toString() {
         return super.toString()+"Audifonos{" + "color=" + color + ", tipo=" + tipo + '}';
