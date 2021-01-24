@@ -22,10 +22,16 @@ import zorzalMusic.KeyboardInput;
  * en la clase de aparatos de ambiente en la cual vamos a aplicar una estructura con switchs para implementarlo.
  */
 public class SeleccionadorDeAparatos {
-
+    /**
+     * Constructor vacío vacío para seleccionador de Aparatos de ambiente
+     */
     public SeleccionadorDeAparatos() {
     }
-    
+    /**
+     * Metodo para seleccionar aparatos de ambiente
+     * @param inventarioTablaMusica, es el inventario de discos de musica generado hasta el momento
+     * @param inventarioTablaVideo , inventario generado hasta el momento de discos de video
+     */
     public void seleccionadorDeAparatosMetodo(Hashtable inventarioTablaMusica, Hashtable inventarioTablaVideo){
         int tipoReproductor;
         System.out.println("Seleccione el tipo de reproductor");

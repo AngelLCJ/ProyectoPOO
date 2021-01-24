@@ -31,16 +31,15 @@ import zorzalMusic.KeyboardInput;
  * en el inventario de la tienda.
  */
 public class aparatosDeAmbiente {
-
-    /*
-    
-    */
+    /**
+     * Constructor vacío de aparatosDeAmbiente
+     */
     public aparatosDeAmbiente() {
     }
     /**
-     * 
-     * @param inventarioTablaMusica
-     * @param inventarioTablaVideo 
+     * Metodo para reproducir musica
+     * @param inventarioTablaMusica, inventario de discos de musica generado hasta el momento
+     * @param inventarioTablaVideo , invnetario de discos de video generado hasta el omento
      */
     public void musicPlayerMetodo(Hashtable inventarioTablaMusica, Hashtable inventarioTablaVideo){
         int opcionRep=0, codigoBarra=0;
@@ -107,6 +106,11 @@ public class aparatosDeAmbiente {
            
      //1}while(opcionRep<3);
     }
+    /**
+     * Metodo para reproducir musica desde el videoplayer
+     * @param inventarioTablaMusica,inventario de discos de musica generado hasta el momento
+     * @param inventarioTablaVideo, invnetario de discos de video generado hasta el omento
+     */
     public void videoPlayerMetodo(Hashtable inventarioTablaMusica, Hashtable inventarioTablaVideo){
         int opcionDisco=0,opcionRep,codigoBarra;
         

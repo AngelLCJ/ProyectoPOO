@@ -22,7 +22,9 @@ import productos.Musica;
  * con ayuda de las tablas hash
  */
 public class Leer {
-
+    /**
+     * Es el constructor vacio de la clase Leer
+     */
     public Leer() {
     }
     

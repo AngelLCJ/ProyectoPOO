@@ -28,7 +28,11 @@ public class Actualizar {
 
     public Actualizar() {
     }
-    
+    /**
+     * 
+     * @param inventarioTabla
+     * @return Hashtable, es el inventario de musica
+     */
     public Hashtable actualizarMusica(Hashtable inventarioTabla){
         int numDiscos,opcion2,codigoBarra;
         Musica discoX;

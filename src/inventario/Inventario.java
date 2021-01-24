@@ -24,10 +24,16 @@ import zorzalMusic.*;
  * sus nombres, con los otros dos tipos de productos hacemos tablas hash para guardar sus datos
  */
 public class Inventario {
-
+    /**
+     * Constructor vacio para el inventario
+     */
     public Inventario() {
     }
-    
+    /**
+     * Metodo que genera el inventario de discos de musica
+     * @param inventarioTabla, es el inventario creado para discos de musica
+     * @return inventarioTabla, es de tipo Hashtable
+     */
     public Hashtable inventarioMusicaMetodo(Hashtable inventarioTabla){//public static void main(String[] args) {
         ArrayList<String>nombreCanciones1=new ArrayList<String>();
         nombreCanciones1.add("Wanna Be Startin' Somethin'");
@@ -118,7 +124,11 @@ public class Inventario {
         
         return inventarioTabla;
     }
-    
+    /**
+     * Metodo que genera el inventario con discos de video
+     * @param inventarioTabla, es el inventario instanciado desde el main
+     * @return inventarioTabla, es de tipo Hashtable
+     */
     public Hashtable inventarioVideoMetodo(Hashtable inventarioTabla){
         Video cd1 = new Video(60," BrunoMars ",1 , 227, 20001, "Funk Engineering", "DVD");
         Video cd2 = new Video(60," Phil Collins ",1 , 399, 20002, "Live at Montreux 2004", "Blu-ray disc");
@@ -134,7 +144,11 @@ public class Inventario {
         
         return inventarioTabla;
     }
-    
+    /**
+     * Es el metodo que genera el inventario que contiene a audifonos
+     * @param inventarioTabla, es el inventario instanciado desde el metodo main
+     * @return inventarioTabla, es de tipo Hashtable
+     */
     public Hashtable inventarioAudifonosMetodo(Hashtable inventarioTabla){
         
         Audifonos audifonos1 = new Audifonos("Negro","In Ear",3200,30001,"SE215","Shure");
