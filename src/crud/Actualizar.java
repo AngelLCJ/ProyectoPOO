@@ -93,7 +93,7 @@ public class Actualizar {
                         ArrayList<String>cancionesNuevas=new ArrayList<String>();
                         int indiceCancion;
                         String nuevaCancion;
-                        System.out.println("Cual cancion deseas modifcar: ");
+                        System.out.println("¿Cual cancion deseas modifcar?: ");
                         indiceCancion=input.readInteger()-1;
                         System.out.println("Ingrese el nuevo nombre ");
                         nuevaCancion=input.readString();

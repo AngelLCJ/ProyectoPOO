@@ -26,7 +26,7 @@ public class Borrar {
     public Borrar() {
     }
     public Hashtable borrarElemento(Hashtable inventario){
-        System.out.println("Cuantos elmentos deseas eliminar");
+        System.out.println("¿Cuantos elmentos deseas eliminar?");
         KeyboardInput input= new KeyboardInput();
         int elementos=input.readInteger();
         for (int i = 0; i <elementos; i++) {

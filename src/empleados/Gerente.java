@@ -51,14 +51,14 @@ public class Gerente {
                         KeyboardInput input  =new KeyboardInput();
                         System.out.println("******* Crud *********\n");
                         System.out.println("1)Crear\t 2)Leer\t 3)Actualizar\t 4)Borrar\t5)Salir\n");
-                        System.out.println("Que opción desea realizar\n");
+                        System.out.println("¿Que opción desea realizar?\n");
                         //Object menu=new Object();
                         opcion1 = input.readInteger();
                         switch(opcion1){
                                 case 1:
                                     do{
                                         Crear crearCrud=new Crear();
-                                        System.out.println("¿Que producto deseas crear\n");
+                                        System.out.println("¿Que producto deseas crear?\n");
                                         System.out.println("1) Disco de musica\t2) Disco de video\t3) Audifonos\t 4) Salir");
                                         KeyboardInput input2=new KeyboardInput();
                                         opcion2=input.readInteger();
@@ -82,7 +82,7 @@ public class Gerente {
                                                 }
                                                 break;
                                             case 4:
-                                                System.out.println("Saliendo al menu de CRUD");
+                                                System.out.println("Saliendo al menu de CRUD...");
                                                 break;
                                             } 
 
@@ -132,7 +132,7 @@ public class Gerente {
                                                 }
                                                 break;
                                             case 5:
-                                                System.out.println("Saliendo al menu de CRUD");
+                                                System.out.println("Saliendo al menu de CRUD...");
                                                 break;
                                        }
                                     }while(opcion2<5);
@@ -172,7 +172,7 @@ public class Gerente {
                                 case 4:
                                     do{
                                         Borrar borrarCrud=new Borrar();
-                                        System.out.println("¿Que producto deseas borrar\n");
+                                        System.out.println("¿Que producto deseas borrar?\n");
                                         System.out.println("1) Disco de musica\t2) Disco de video\t3) Audifonos\t 4) Salir al menu de CRUD");
                                         KeyboardInput input2=new KeyboardInput();
                                         opcion2=input.readInteger();
@@ -196,7 +196,7 @@ public class Gerente {
                                                 }
                                                 break;
                                             case 4:
-                                                System.out.println("Saliendo al menu de CRUD");
+                                                System.out.println("Saliendo al menu de CRUD...");
                                                 break;
                                             } 
                                     }while(opcion2<4);

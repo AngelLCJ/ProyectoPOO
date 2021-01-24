@@ -1,0 +1,4 @@
+Usuario = Antonio
+Tipo = 
+Gerente
+Contraseña = poo

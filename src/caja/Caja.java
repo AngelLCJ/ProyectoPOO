@@ -43,7 +43,7 @@ public class Caja {
                 
                 case 1:
                     
-                    System.out.println("¿Cuantos elementos desea buscar/vender");
+                    System.out.println("¿Cuantos elementos desea buscar/vender?");
                     numProd = input.readInteger();
                     for (int i = 0; i < numProd; i++) {
                         System.out.println("Ingrese le codigo de barras del producto "+(i+1));
@@ -57,7 +57,7 @@ public class Caja {
                             nombreProductoX = productoX.getNombre();
                             precioX = productoX.getPrecio();
                             System.out.println("El producto es: "+nombreProductoX+". El precio es: "+precioX);
-                            System.out.println("¿Desea vender el producto");
+                            System.out.println("¿Desea vender el producto?");
                             System.out.println("1) Sí\n2) No");
                             venta = input.readInteger();
                             if(venta == 1){
@@ -75,7 +75,7 @@ public class Caja {
                             nombreProductoX = productoX.getNombre();
                             precioX = productoX.getPrecio();
                             System.out.println("El producto es: "+nombreProductoX+". El precio es: "+precioX);
-                            System.out.println("¿Desea vender el producto");
+                            System.out.println("¿Desea vender el producto?");
                             System.out.println("1) Sí\n2) No");
                             venta = input.readInteger();
                             if(venta == 1){
@@ -93,7 +93,7 @@ public class Caja {
                             nombreProductoX = productoX.getNombre();
                             precioX = productoX.getPrecio();
                             System.out.println("El producto es: "+nombreProductoX+". El precio es: "+precioX);
-                            System.out.println("¿Desea vender el producto");
+                            System.out.println("¿Desea vender el producto?");
                             System.out.println("1) Sí\n2) No");
                             venta = input.readInteger();
                             if(venta == 1){
