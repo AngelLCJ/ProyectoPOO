@@ -12,6 +12,9 @@ package inicio;
  * @author Mendoza Bolaños Carlos Gabriel
  * @author Villanueva Corona Miguel Ángel
  * 
+ * En esta clase se encarga de mosctrar una ventana en la cual, el usuario 
+ * tendra dos opciones; registrarse o iniciar sesión, dependiendo de que boton
+ * se eliga se llamaran a las clases regisro o iniciarSesion respectivamente.
  */
 public class login extends javax.swing.JFrame {
 

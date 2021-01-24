@@ -20,6 +20,8 @@ import zorzalMusic.*;
  * @author Mendoza Bolaños Carlos Gabriel
  * @author Villanueva Corona Miguel Ángel
  * 
+ * En esta clase lo que se hace es registrar el usuario con un nobre, dos 
+ * contraseñas y de que tipo de usuario es.
  */
 public class registro extends javax.swing.JFrame {
     
@@ -32,8 +34,12 @@ public class registro extends javax.swing.JFrame {
     public registro() {
         initComponents();
     }
-    
+
     private void crear(){
+        /**
+         * crea un archivo con su nobre de inicio de sesión,así se sabrá si ya 
+         * existe el usuario o no, para su correcto registro
+         */
         String archivo = nombre.getText()+".txt";
         File crearUbic = new File(crearUbicacion);
         File crearArchi = new File(crearUbicacion + archivo);
@@ -189,7 +195,13 @@ public class registro extends javax.swing.JFrame {
     private void contra2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contra2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_contra2ActionPerformed
-
+    /**
+     * 
+     * @param evt 
+     * Aquí se obtiene todos los datos de del usuario guardandolos en variables, 
+     * encapsulamos para evitar que no tenga datos por llenar y que las contraseñas
+     * conincidan.
+     */
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         String cadena1, cadena2, cadena3, cadena4;
@@ -199,7 +211,9 @@ public class registro extends javax.swing.JFrame {
         cadena2 = contra1.getText().toString();
         cadena3 = contra2.getText().toString();
         cadena4 = tipoUsuario.getSelectedItem().toString();
-        if (((nombre.getText().equals("") || contra1.getText().equals("")) || contra2.getText().equals("")) || (tipoUsuario.getSelectedItem().equals(null))) {
+        if (((nombre.getText().equals("") || contra1.getText().equals("")) || 
+                contra2.getText().equals("")) || 
+                (tipoUsuario.getSelectedItem().equals(null))) {
             
             javax.swing.JOptionPane.showMessageDialog(this,"Debe llenar todos los campos \n","AVISO!",javax.swing.JOptionPane.INFORMATION_MESSAGE);
             nombre.requestFocus();
@@ -216,7 +230,13 @@ public class registro extends javax.swing.JFrame {
         contra1.setText("");
         tipoUsuario.setSelectedItem("");
     }//GEN-LAST:event_jButton1ActionPerformed
-
+    /**
+     * 
+     * 
+     * @param evt 
+     * Lo que hacemos es que evitimaos que usuario solo ponga letras y no números
+     * o espacios en blanco.
+     */
     private void nombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nombreKeyTyped
         // TODO add your handling code here:
         char c = evt.getKeyChar();

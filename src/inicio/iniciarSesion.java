@@ -18,6 +18,7 @@ import empleados .*;
  * @author Mendoza Bolaños Carlos Gabriel
  * @author Villanueva Corona Miguel Ángel
  * 
+ * En esta clase lo que se hace  
  */
 public class iniciarSesion extends javax.swing.JFrame{
     /**
@@ -26,7 +27,12 @@ public class iniciarSesion extends javax.swing.JFrame{
     public iniciarSesion() {
         initComponents();
     }
-    
+    /**
+     * 
+     * @param contra es la contraseña del usuario 
+     * @param id es el nombre del usuario
+     * @return un boolean true si es que encuentra al usuario en la base de datos.
+     */
     public boolean buscarRegistro(String contra, String id){
         
         boolean confirmado2 = false;
@@ -56,7 +62,12 @@ public class iniciarSesion extends javax.swing.JFrame{
         }
         return confirmado2;
     }
-    
+    /**
+     * 
+     * @param id es el tipo del usuario
+     * @param arch es el nombre del usuario
+     * @return boolean true si es que encuantran que tipo de usuario es
+     */
     public boolean buscarTipoUsu(String id, String arch){
         
         String usu0, usu3;
@@ -101,7 +112,12 @@ public class iniciarSesion extends javax.swing.JFrame{
         }
         return tipo;
     }
-    
+    /**
+     * 
+     * @param usu es el nombre del usuario
+     * Lo que se hace es buscar si existe el usuario en la base de datos.
+     * @return un boolean true si es que encuentra el usuario.
+     */
     public boolean  buscarArchivo(String usu){
        
         String usu0, usu3;
@@ -220,7 +236,12 @@ public class iniciarSesion extends javax.swing.JFrame{
     private void paswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paswordActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_paswordActionPerformed
-
+    /**
+     * @param evt 
+     * Lo que se hace es las llamadas a las funciones buscarArchivo y 
+     * buscarRegistro para ver si estos coninciden en la base de datos si es así
+     * se le permite el acceso de lo contrario no podrá ingresar.
+     */
     private void aceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aceptarActionPerformed
         // TODO add your handling code here:
 
@@ -256,7 +277,12 @@ public class iniciarSesion extends javax.swing.JFrame{
             }
         }        
     }//GEN-LAST:event_aceptarActionPerformed
-
+    /**
+     *
+     * @param evt 
+     * Lo que hacemos es que evitimaos que usuario solo ponga letras y no números
+     * o espacios en blanco.
+     */
     private void UsuarioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_UsuarioKeyTyped
         // TODO add your handling code here:
         char c = evt.getKeyChar();
@@ -267,6 +293,7 @@ public class iniciarSesion extends javax.swing.JFrame{
 
     /**
      * @param args the command line arguments
+     * 
      */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
