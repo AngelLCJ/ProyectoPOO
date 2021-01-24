@@ -32,9 +32,16 @@ import zorzalMusic.KeyboardInput;
  */
 public class aparatosDeAmbiente {
 
+    /*
+    
+    */
     public aparatosDeAmbiente() {
     }
-    
+    /**
+     * 
+     * @param inventarioTablaMusica
+     * @param inventarioTablaVideo 
+     */
     public void musicPlayerMetodo(Hashtable inventarioTablaMusica, Hashtable inventarioTablaVideo){
         int opcionRep=0, codigoBarra=0;
         while(opcionRep<3){
@@ -101,7 +108,8 @@ public class aparatosDeAmbiente {
      //1}while(opcionRep<3);
     }
     public void videoPlayerMetodo(Hashtable inventarioTablaMusica, Hashtable inventarioTablaVideo){
-        int opcionDisco,opcionRep,codigoBarra;
+        int opcionDisco=0,opcionRep,codigoBarra;
+        
         System.out.println("Ingrese el tipo de disco que quiere reproducir");
         System.out.println("1) Disco de video\t2) Disco de musica 3) Salir al selector de aparatos de ambiente");
         KeyboardInput input=new KeyboardInput();
@@ -175,10 +183,15 @@ public class aparatosDeAmbiente {
                                 System.out.println(canciones);
                                 break;
                             case 2:
-                                int numeroCancion;
+                                int numeroCancion,i=1;
                                 String cancion;
                                 //ArrayList<String>canciones=new ArrayList<String>();
-                                //Musica discoX;
+                                discoXM=(Musica)inventarioTablaMusica.get(codigoBarra);
+                                canciones=discoXM.getNombreCanciones();
+                                for(String elemento: canciones){
+                                    System.out.println(i +". "+ elemento); 
+                                    i += 1;
+                                }
                                 System.out.println("Ingrese el numero de la cancion a reproducir");
                                 numeroCancion = input.readInteger()-1;
                                 discoXM=(Musica)inventarioTablaMusica.get(codigoBarra);
