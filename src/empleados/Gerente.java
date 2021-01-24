@@ -24,7 +24,11 @@ import zorzalMusic.KeyboardInput;
  * a la caja, esto se realizo con ayuda de las otras clases que tenian que ver con estos apartados cada una 
  */
 public class Gerente {
-    
+    /**
+     * 
+     * @param usuario 
+     * resive un usuario en donde este va a servir para generar el ticket
+     */
     public void Gerente(String usuario) {
         int opcion1 ;
         int opcion2;

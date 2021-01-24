@@ -25,7 +25,11 @@ import zorzalMusic.KeyboardInput;
  * a la caja, esto se realizo con ayuda de las otras clases contenidas en diferentes paquetes
  */
 public class Vendedor {
-    
+    /**
+     * 
+     * @param usuario 
+     * resive un usuario en donde este va a servir para generar el ticket
+     */
     public void Vendedor(String usuario) {
         int opcion1 ;
         int opcion2;

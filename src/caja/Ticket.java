@@ -38,10 +38,18 @@ import productos.*;
  */
 public class Ticket {
    // public static void main(String[] args) {
-    
+    /**
+     * constructor vacio
+     */
     public Ticket(){
     }
-
+    /**
+     * metodo en el cual resive parametros para poder imprimir los datos solicitados
+     * @param listaVenta tipo hastable regrasa los articulos a comprar
+     * @param importe saldo entregado por el cliente para pagar el monto total
+     * @param total es el total a pagar de todos los productos comprados
+     * @param usuario es la persona que ingresa al codigo ya sea un gerente o vendedor
+     */
     public void ticketMetodo(Hashtable listaVenta, float importe, float total, String usuario) {
         String nombreProducto;
         int codigoBarra;

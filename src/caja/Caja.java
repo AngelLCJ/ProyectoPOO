@@ -28,6 +28,15 @@ import zorzalMusic.KeyboardInput;
  * al usuario.
  */
 public class Caja {
+    /**
+     * metodo el cual va a manejar todo lo relacionado con la caja registradora
+     * @param inventarioMusica parametro que registra el contenido de la hastable
+     * @param inventarioVideo parametro que registra el contenido de la hastable
+     * @param inventarioAudifonos parametro que registra el contenido de la hastable
+     * @param listaVenta tipo hastable regrasa los articulos a comprar
+     * @param usuario es la persona que ingresa al codigo ya sea un gerente o vendedo
+     * @return retorna el valor de la lista de ventas ya que esta va a ser de utilidad en el ticket
+     */
     public Hashtable cajaMetodo(Hashtable inventarioMusica, Hashtable inventarioVideo, Hashtable inventarioAudifonos, Hashtable listaVenta, String usuario){
         int numOpcion = 0;
         int numProd, codigoBarra;
