@@ -25,9 +25,9 @@ import zorzalMusic.KeyboardInput;
  */
 public class Gerente {
     /**
-     * 
+     * Metodo que le da las opciones de operacion al gerente
      * @param usuario 
-     * resive un usuario en donde este va a servir para generar el ticket
+     * recibe un usuario en donde este va a servir para generar el ticket
      */
     public void Gerente(String usuario) {
         int opcion1 ;

@@ -26,7 +26,7 @@ import zorzalMusic.KeyboardInput;
  */
 public class Vendedor {
     /**
-     * 
+     * Metodo que le da las opciones al vendedor
      * @param usuario 
      * resive un usuario en donde este va a servir para generar el ticket
      */
